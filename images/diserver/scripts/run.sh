@@ -1,0 +1,1 @@
+sh ctl.sh start
