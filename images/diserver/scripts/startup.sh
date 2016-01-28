@@ -11,6 +11,9 @@ if [ ! -f ${PENTAHO_HOME}/.touched ]; then
   # Update solutions path in web.xml
   perl -0777 -i -pe 's/<param-name>solution-path.*<param-value><\/param-value>/<param-name>solution-path<\/param-name>\n\t\t<param-value>$ENV{'PENTAHO_HOME'}\/server\/data-integration-server\/pentaho-solutions<\/param-value>/smg' $CATALINA_HOME/webapps/pentaho-di/WEB-INF/web.xml
 
+  # kettle.properties
+  #sed -i "s/PENTAHO_HOME/$PENTAHO_HOME/g" $PENTAHO_HOME/server/data-integration-server/pentaho-solutions/system/kettle/kettle.properties
+
   # startup.sh: Add 'DI_HOME=$DIR/pentaho-solutions/system/kettle' before 'Check that target executable exists' line
   #perl -0777 -i -pe 's/# Check that target executable exists/$&\nDI_HOME\=$PENTAHO_HOME\/server\/data-integration-server\/pentaho-solutions\/system\/kettle\n/g' $CATALINA_HOME/bin/startup.sh
 
@@ -35,5 +38,6 @@ fi
 sh setup-ssh.sh
 sh setup-postgres.sh
 sh setup-ee-licenses.sh
+sh setup-samples.sh
 #if [ "${CLUSTERED}" ]; then sh setup-clustering.sh; fi
 sh run.sh

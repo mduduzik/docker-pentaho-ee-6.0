@@ -50,5 +50,6 @@ fi
 sh setup-ssh.sh
 sh setup-postgres.sh
 sh setup-ee-licenses.sh
+sh setup-samples.sh
 #if [ "${CLUSTERED}" ]; then sh setup-clustering.sh; fi
 sh run.sh

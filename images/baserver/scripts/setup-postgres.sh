@@ -14,9 +14,9 @@ if [ -f "${HOME}/.pgpass" -o "${PGHOST}" ]; then
     exit 0
   fi
 
-  CHK_QUARTZ=`echo "$(psql -U ${PGUSER} -h ${PGHOST} -p ${PGPORT} -d ${PGDATABASE} -l | grep quartz | wc -l)"`
-  CHK_HIBERNATE=`echo "$(psql -U ${PGUSER}  -h ${PGHOST} -p ${PGPORT} -d ${PGDATABASE} -l | grep hibernate | wc -l)"`
-  CHK_JCR=`echo "$(psql -U ${PGUSER}  -h ${PGHOST} -p ${PGPORT} -d ${PGDATABASE} -l | grep jackrabbit | wc -l)"`
+  CHK_QUARTZ=`echo "$(psql -U ${PGUSER} -h ${PGHOST} -p ${PGPORT} -d ${PGDATABASE} -l | grep -w quartz | wc -l)"`
+  CHK_HIBERNATE=`echo "$(psql -U ${PGUSER}  -h ${PGHOST} -p ${PGPORT} -d ${PGDATABASE} -l | grep -w hibernate | wc -l)"`
+  CHK_JCR=`echo "$(psql -U ${PGUSER}  -h ${PGHOST} -p ${PGPORT} -d ${PGDATABASE} -l | grep -w jackrabbit | wc -l)"`
 
   echo "quartz: ${CHK_QUARTZ}"
   echo "hibernate: ${CHK_HIBERNATE}"

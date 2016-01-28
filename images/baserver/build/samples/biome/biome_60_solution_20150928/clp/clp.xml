@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<config>
+		<name>BioMe</name>
+		<basepath>/public/bioMe</basepath>
+		<whitelist>\.wcdf$|\.prpti$|\.prpt$|\.xdash$|.xanalyzer$</whitelist>
+		<css>/public/bioMe/bioMeCSS.css</css>
+		<js>/public/bioMe/bioMeJS.js</js>
+	</config>
+	<config>
+		<name>SteelWheels</name>
+		<basepath>/public/bi-developers</basepath>
+		<whitelist>\.wcdf$|\.prpti$|\.prpt$|\.xdash$|.xanalyzer$</whitelist>
+		<css>/public/bi-developers/css2.css</css>data
+	</config>
+</configs>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dashboard>
+<title>HealthOutcomesComparison</title>
+<heading>Health Outcomes Before / After Device Use Start</heading>
+<enableWidgetPrinting>false</enableWidgetPrinting>
+<documentation>
+<author>admin</author>
+<description/>
+<icon/>
+</documentation>
+<template-ref>xul/08-3-col.xul</template-ref>
+<theme-ref>20-default</theme-ref>
+<layout>
+<overlay xmlns:pho="http://www.pentaho.com" pho:fixie="withme">
+<box id="Panel_1" pho:title="Body Mass Index" flex="1" collapsed="false" type="titled-panel"/>
+<box id="Panel_2" pho:title="Calories Burned" flex="1" collapsed="false" type="titled-panel"/>
+<box id="Panel_3" pho:title="Blood Pressure" flex="1" collapsed="false" type="titled-panel"/>
+<box id="Panel_4" pho:title="Untitled 4" flex="1263" collapsed="false" type="titled-panel"/>
+<box id="Panel_5" pho:title="Untitled 5" flex="387" collapsed="false" type="titled-panel"/>
+<box id="Panel_6" pho:title="Untitled 6"/>
+<box id="Panel_7" pho:title="Untitled 7"/>
+<box id="Panel_8" pho:title="Untitled 8"/>
+<box id="Panel_9" pho:title="Untitled 9"/>
+<box id="Panel_10" pho:title="Untitled 10"/>
+<box id="Label_1" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_2" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_3" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_4" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_5" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_6" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_7" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_8" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_9" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="Label_10" pho:value="!DashboardRenderer.DEFAULT_LABEL_TEXT!"/>
+<box id="titlebar" hidden="false" collapsed="false" width="0" type="pagetitle" title="" height="23"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="FilterPanel" hidden="false" collapsed="false" width="0" type="povpanel" title="" height="121"><hbox id="FilterPanel content" width="0" type="" height="0"><vbox id="pov_widget_10_container" height="0" width="0" label="[object Object]" type=""><label id="pov_widget_10_label" value="Gender Prompt" hidden="false"/><box pho:type="pov" id="pov_widget_10"/></vbox><vbox id="pov_widget_9_container" height="0" width="0" label="[object Object]" type=""><label id="pov_widget_9_label" value="Medical Prompt" hidden="false"/><box pho:type="pov" id="pov_widget_9"/></vbox></hbox></box><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="533"/><box id="vbox1" type="layout"/><box id="vbox2" flex="575"/><box id="vbox2" type="layout"/><box id="vbox3" flex="554"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="hbox1" flex="434"/><box id="hbox1" type="layout"/><box id="hbox2" flex="283"/><box id="hbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="hbox1" flex="1"/><box id="hbox1" type="layout"/><box id="hbox2" flex="1"/><box id="hbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="pov_widget_1" collapsed="false" width="0" type="pov" title="" height="0"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="pov_widget_2" collapsed="false" width="0" type="pov" title="" height="0"/><box id="bottomWrapper" flex="749"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="695"/><box id="vbox1" type="layout"/><box id="vbox2" flex="628"/><box id="vbox2" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="pov_widget_3" collapsed="false" width="0" type="pov" title="" height="0"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="pov_widget_4" collapsed="false" width="0" type="pov" title="" height="0"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="pov_widget_5" collapsed="false" width="0" type="pov" title="" height="0"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="pov_widget_6" title="" height="0" width="0" type="pov" collapsed="false"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="pov_widget_7" title="" height="0" width="0" type="pov" collapsed="false"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="pov_widget_8" title="" height="0" width="0" type="pov" collapsed="false"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" flex="1"/><box id="widget-area" type="scrollarea"/><box id="bottomWrapper" flex="1"/><box id="bottomWrapper" type="layout"/><box id="vbox1" flex="1"/><box id="vbox1" type="layout"/><box id="vbox2" flex="1"/><box id="vbox2" type="layout"/><box id="vbox3" flex="1"/><box id="vbox3" type="layout"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="pov_widget_9" title="" height="0" width="0" type="pov" collapsed="false"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="pov_widget_10" title="" height="0" width="0" type="pov" collapsed="false"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="1"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="644"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/><box id="widget-area" type="scrollarea"/><box id="widget-area" flex="1"/><box id="bottomWrapper" type="layout"/><box id="bottomWrapper" flex="644"/><box id="vbox1" type="layout"/><box id="vbox1" flex="1"/><box id="vbox2" type="layout"/><box id="vbox2" flex="1"/><box id="vbox3" type="layout"/><box id="vbox3" flex="1"/></overlay>
+</layout>
+<parameters>
+<parameter>
+  <name>test1443015826707</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>test1443015826707</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>Type1443015930343</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>Type1443015930343</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>Gender1443081722803</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender1443081722803</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>85612$85612$[Months since device activation].[Months since device activation]</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>Filter1443089880075</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>Filter1443089880075</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443090198296</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>AgePrompt1443090198296</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>69250$69250$[Months since device activation].[Months since device activation]</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>AgePrompt1443090198296</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>AgePrompt1443090198296</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>AgePrompt1443090198296</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>AgePrompt1443090198296</name>
+  <defaultValue/>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443096736056</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443096736056</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443096736056</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443096736056</name>
+  <defaultValue>undefined</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>AgePrompt1443095865281</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender1443174854848</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender1443174854848</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender1443174854848</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender1443174854848</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443174907344</name>
+  <defaultValue>21 to 30</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender1443174854848</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender1443174854848</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Age1443178709315</name>
+  <defaultValue>11 to 20</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443171404918</name>
+  <defaultValue>Obesity</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443191461655</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443191461655</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443191461655</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443191461655</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443191461655</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Gender Prompt1443191461655</name>
+  <defaultValue>Male</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+<parameter>
+  <name>Medical Prompt1443191356638</name>
+  <defaultValue>Heart Disease</defaultValue>
+</parameter>
+</parameters>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<widgetJavascript><![CDATA[%5B%7B%22listeners%22%3A%5B%22Gender%20Prompt1443191461655%22%2C%22Medical%20Prompt1443191356638%22%2C%22Medical%20Prompt1443191356638%22%5D%2C%22htmlObject%22%3A%22content-area-Panel_1%22%2C%22GUID%22%3A%2275745%22%2C%22isDirty%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A50.912Z%22%2C%22elapsedSinceSplit%22%3A1%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A50.904Z%22%2C%22type%22%3A%22AnalyzerComponent%22%2C%22refreshPeriod%22%3A0%2C%22solution%22%3A%22%22%2C%22staticParameters%22%3Atrue%2C%22xactionPath%22%3A%22%2Fpublic%2FbioMe%2F10-Dashboards%2FReports%2FBMIAnalysis.xanalyzer%22%2C%22outputParameters%22%3A%5B%5B%22Months%20since%20device%20activation%22%2Cfalse%2C%2275745%24%5BDevice%20Info.Months%20since%20device%20activation%5D.%5BMonths%20since%20device%20activation%5D%22%5D%5D%2C%22localizedName%22%3A%22BMI%20Analysis%22%2C%22iframe%22%3Atrue%2C%22name%22%3A%22widget1%22%2C%22cl%22%3A%22%22%2C%22action%22%3A%22BMIAnalysis.xanalyzer%22%2C%22path%22%3A%22%2Fpublic%2FbioMe%2F10-Dashboards%2FReports%2FBMIAnalysis.xanalyzer%22%2C%22elapsedSinceStart%22%3A8%2C%22parameters%22%3A%5B%5B%22genderParam%22%2C%22Gender%20Prompt1443191461655%22%2C%22Male%22%5D%2C%5B%22medParam%22%2C%22Medical%20Prompt1443191356638%22%5D%5D%2C%22logColor%22%3A%22rgb(85%2C184%2C83)%22%7D%2C%7B%22listeners%22%3A%5B%22Gender%20Prompt1443191461655%22%2C%22Medical%20Prompt1443191356638%22%2C%22Medical%20Prompt1443191356638%22%5D%2C%22htmlObject%22%3A%22content-area-Panel_2%22%2C%22GUID%22%3A%2276137%22%2C%22isDirty%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A50.913Z%22%2C%22elapsedSinceSplit%22%3A1%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A50.905Z%22%2C%22type%22%3A%22AnalyzerComponent%22%2C%22refreshPeriod%22%3A0%2C%22solution%22%3A%22%22%2C%22staticParameters%22%3Atrue%2C%22xactionPath%22%3A%22%2Fpublic%2FbioMe%2F10-Dashboards%2FReports%2FCaloriesAnalysis.xanalyzer%22%2C%22outputParameters%22%3A%5B%5B%22Months%20since%20device%20activation%22%2Cfalse%2C%2276137%24%5BDevice%20Info.Months%20since%20device%20activation%5D.%5BMonths%20since%20device%20activation%5D%22%5D%5D%2C%22localizedName%22%3A%22Calories%20Analysis%22%2C%22iframe%22%3Atrue%2C%22name%22%3A%22widget2%22%2C%22cl%22%3A%22%22%2C%22action%22%3A%22CaloriesAnalysis.xanalyzer%22%2C%22path%22%3A%22%2Fpublic%2FbioMe%2F10-Dashboards%2FReports%2FCaloriesAnalysis.xanalyzer%22%2C%22elapsedSinceStart%22%3A8%2C%22parameters%22%3A%5B%5B%22genderParam%22%2C%22Gender%20Prompt1443191461655%22%2C%22Male%22%5D%2C%5B%22medParam%22%2C%22Medical%20Prompt1443191356638%22%5D%5D%2C%22logColor%22%3A%22rgb(84%2C184%2C82)%22%7D%2C%7B%22listeners%22%3A%5B%22Gender%20Prompt1443191461655%22%2C%22Medical%20Prompt1443191356638%22%2C%22Medical%20Prompt1443191356638%22%5D%2C%22htmlObject%22%3A%22content-area-Panel_3%22%2C%22GUID%22%3A%2266978%22%2C%22isDirty%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A50.913Z%22%2C%22elapsedSinceSplit%22%3A0%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A50.906Z%22%2C%22type%22%3A%22AnalyzerComponent%22%2C%22refreshPeriod%22%3A0%2C%22solution%22%3A%22%22%2C%22staticParameters%22%3Atrue%2C%22xactionPath%22%3A%22%2Fpublic%2FbioMe%2F10-Dashboards%2FReports%2FSystolicAnalysis.xanalyzer%22%2C%22outputParameters%22%3A%5B%5B%22Months%20since%20device%20activation%22%2Cfalse%2C%2266978%24%5BDevice%20Info.Months%20since%20device%20activation%5D.%5BMonths%20since%20device%20activation%5D%22%5D%5D%2C%22localizedName%22%3A%22Systolic%20Analysis%22%2C%22iframe%22%3Atrue%2C%22name%22%3A%22widget3%22%2C%22cl%22%3A%22%22%2C%22action%22%3A%22SystolicAnalysis.xanalyzer%22%2C%22path%22%3A%22%2Fpublic%2FbioMe%2F10-Dashboards%2FReports%2FSystolicAnalysis.xanalyzer%22%2C%22elapsedSinceStart%22%3A7%2C%22parameters%22%3A%5B%5B%22genderParam%22%2C%22Gender%20Prompt1443191461655%22%2C%22Male%22%5D%2C%5B%22medParam%22%2C%22Medical%20Prompt1443191356638%22%5D%5D%2C%22logColor%22%3A%22rgb(83%2C184%2C81)%22%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_1%22%2C%22GUID%22%3A%2275084%22%2C%22verticalOrientation%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.936Z%22%2C%22type%22%3A%22select%22%2C%22title%22%3A%22Type%22%2C%22parameter%22%3A%22Type1443015930343%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_1%22%2C%22elapsedSinceStart%22%3A49%2C%22parameters%22%3A%5B%5D%2C%22defaultValue%22%3Anull%2C%22logColor%22%3A%22rgb(149%2C128%2C159)%22%2C%22valuesArray%22%3A%5B%5B%22Gender%22%2C%22Gender%22%5D%2C%5B%22BPM%22%2C%22BPM%22%5D%2C%5B%22BMI%22%2C%22BMI%22%5D%5D%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A39.985Z%22%2C%22elapsedSinceSplit%22%3A49%2C%22defaultIfEmpty%22%3Atrue%2C%22_defaultValueInitialized%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Atrue%2C%22filterType%22%3A%22static%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_10%22%2C%22GUID%22%3A%2271277%22%2C%22verticalOrientation%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22isMultiple%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.938Z%22%2C%22type%22%3A%22selectMultiComponent%22%2C%22title%22%3A%22Gender%20Prompt%22%2C%22parameter%22%3A%22Gender%20Prompt1443191461655%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_10%22%2C%22elapsedSinceStart%22%3A48%2C%22parameters%22%3A%5B%5D%2C%22defaultValue%22%3A%22Male%22%2C%22logColor%22%3A%22rgb(164%2C190%2C179)%22%2C%22valuesArray%22%3A%5B%5B%22Female%22%2C%22Female%22%5D%2C%5B%22Male%22%2C%22Male%22%5D%5D%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A39.986Z%22%2C%22elapsedSinceSplit%22%3A48%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22filterType%22%3A%22static%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_2%22%2C%22GUID%22%3A%2234106%22%2C%22valueAsId%22%3Afalse%2C%22verticalOrientation%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.940Z%22%2C%22type%22%3A%22checkComponent%22%2C%22title%22%3A%22AgePrompt%22%2C%22parameter%22%3A%22AgePrompt1443090198296%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_2%22%2C%22elapsedSinceStart%22%3A777%2C%22parameters%22%3A%5B%5B%22command%22%2C%22%22%2C%22listmql%22%5D%2C%5B%22lblidx%22%2C%22%22%2C%220%22%5D%2C%5B%22validx%22%2C%22%22%2C%220%22%5D%2C%5B%22filterColumns%22%2C%22%22%2C%22true%22%5D%2C%5B%22dataSourceName%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22mql%22%2C%22%22%2C%22%3C%3Fxml%20version%3D%5C%221.0%5C%22%20encoding%3D%5C%22UTF-8%5C%22%3F%3E%5Cn%3Cmql%3E%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%2Fdomain_id%3E%5Cn%3Cmodel_id%3EMODEL_1%3C%2Fmodel_id%3E%5Cn%3Coptions%3E%5Cn%3Cdisable_distinct%3Efalse%3C%2Fdisable_distinct%3E%5Cn%3Climit%3E-1%3C%2Flimit%3E%5Cn%3C%2Foptions%3E%5Cn%3Cselections%3E%5Cn%3Cselection%3E%5Cn%3Cview%3EPatient_Group%3C%2Fview%3E%5Cn%3Ccolumn%3ELC_BIOME_EHR_age_group_2%3C%2Fcolumn%3E%5Cn%3Caggregation%3ENONE%3C%2Faggregation%3E%5Cn%3C%2Fselection%3E%5Cn%3C%2Fselections%3E%5Cn%3Cconstraints%2F%3E%5Cn%3Corders%2F%3E%5Cn%3C%2Fmql%3E%22%5D%2C%5B%22modelId%22%2C%22%22%2C%22MODEL_1%22%5D%2C%5B%22domainId%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22jsMql%22%2C%22%22%2C%22%7B%5C%22MQLQuery%5C%22%3A%7B%5C%22cols%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.beans.Column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_age_group_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Age%20group%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%5D%2C%5C%22limit%5C%22%3A-1%2C%5C%22domain%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22default%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22model%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22MODEL_1%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22query%5C%22%3A%5C%22%3C%3Fxml%20version%3D%5C%5C%5C%221.0%5C%5C%5C%22%20encoding%3D%5C%5C%5C%22UTF-8%5C%5C%5C%22%3F%3E%5C%5Cn%3Cmql%3E%5C%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%5C%5C%2Fdomain_id%3E%5C%5Cn%3Cmodel_id%3EMODEL_1%3C%5C%5C%2Fmodel_id%3E%5C%5Cn%3Coptions%3E%5C%5Cn%3Cdisable_distinct%3Efalse%3C%5C%5C%2Fdisable_distinct%3E%5C%5Cn%3Climit%3E-1%3C%5C%5C%2Flimit%3E%5C%5Cn%3C%5C%5C%2Foptions%3E%5C%5Cn%3Cselections%3E%5C%5Cn%3Cselection%3E%5C%5Cn%3Cview%3EPatient_Group%3C%5C%5C%2Fview%3E%5C%5Cn%3Ccolumn%3ELC_BIOME_EHR_age_group_2%3C%5C%5C%2Fcolumn%3E%5C%5Cn%3Caggregation%3ENONE%3C%5C%5C%2Faggregation%3E%5C%5Cn%3C%5C%5C%2Fselection%3E%5C%5Cn%3C%5C%5C%2Fselections%3E%5C%5Cn%3Cconstraints%5C%5C%2F%3E%5C%5Cn%3Corders%5C%5C%2F%3E%5C%5Cn%3C%5C%5C%2Fmql%3E%5C%22%7D%7D%22%5D%2C%5B%22xdash%22%2C%22%22%2C%22%2Fpublic%2FbioMe%2F10-Dashboards%2FHealthOutcomesComparison.xdash%22%5D%2C%5B%22component%22%2C%22%22%2C%22pov_widget_2%22%5D%5D%2C%22defaultValue%22%3Anull%2C%22logColor%22%3A%22rgb(149%2C127%2C159)%22%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A40.717Z%22%2C%22elapsedSinceSplit%22%3A777%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22url%22%3A%22dashboards%22%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Atrue%2C%22currentVal%22%3Anull%2C%22filterType%22%3A%22mql%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_2%22%2C%22GUID%22%3A%2234106%22%2C%22valueAsId%22%3Afalse%2C%22verticalOrientation%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.942Z%22%2C%22type%22%3A%22checkComponent%22%2C%22title%22%3A%22AgePrompt%22%2C%22parameter%22%3A%22AgePrompt1443090198296%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_2%22%2C%22elapsedSinceStart%22%3A1589%2C%22parameters%22%3A%5B%5B%22command%22%2C%22%22%2C%22listmql%22%5D%2C%5B%22lblidx%22%2C%22%22%2C%220%22%5D%2C%5B%22validx%22%2C%22%22%2C%220%22%5D%2C%5B%22filterColumns%22%2C%22%22%2C%22true%22%5D%2C%5B%22dataSourceName%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22mql%22%2C%22%22%2C%22%3C%3Fxml%20version%3D%5C%221.0%5C%22%20encoding%3D%5C%22UTF-8%5C%22%3F%3E%5Cn%3Cmql%3E%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%2Fdomain_id%3E%5Cn%3Cmodel_id%3EMODEL_1%3C%2Fmodel_id%3E%5Cn%3Coptions%3E%5Cn%3Cdisable_distinct%3Efalse%3C%2Fdisable_distinct%3E%5Cn%3Climit%3E-1%3C%2Flimit%3E%5Cn%3C%2Foptions%3E%5Cn%3Cselections%3E%5Cn%3Cselection%3E%5Cn%3Cview%3EPatient_Group%3C%2Fview%3E%5Cn%3Ccolumn%3ELC_BIOME_EHR_age_group_2%3C%2Fcolumn%3E%5Cn%3Caggregation%3ENONE%3C%2Faggregation%3E%5Cn%3C%2Fselection%3E%5Cn%3C%2Fselections%3E%5Cn%3Cconstraints%2F%3E%5Cn%3Corders%2F%3E%5Cn%3C%2Fmql%3E%22%5D%2C%5B%22modelId%22%2C%22%22%2C%22MODEL_1%22%5D%2C%5B%22domainId%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22jsMql%22%2C%22%22%2C%22%7B%5C%22MQLQuery%5C%22%3A%7B%5C%22cols%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.beans.Column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_age_group_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Age%20group%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%5D%2C%5C%22limit%5C%22%3A-1%2C%5C%22domain%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22default%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22model%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22MODEL_1%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22query%5C%22%3A%5C%22%3C%3Fxml%20version%3D%5C%5C%5C%221.0%5C%5C%5C%22%20encoding%3D%5C%5C%5C%22UTF-8%5C%5C%5C%22%3F%3E%5C%5Cn%3Cmql%3E%5C%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%5C%5C%2Fdomain_id%3E%5C%5Cn%3Cmodel_id%3EMODEL_1%3C%5C%5C%2Fmodel_id%3E%5C%5Cn%3Coptions%3E%5C%5Cn%3Cdisable_distinct%3Efalse%3C%5C%5C%2Fdisable_distinct%3E%5C%5Cn%3Climit%3E-1%3C%5C%5C%2Flimit%3E%5C%5Cn%3C%5C%5C%2Foptions%3E%5C%5Cn%3Cselections%3E%5C%5Cn%3Cselection%3E%5C%5Cn%3Cview%3EPatient_Group%3C%5C%5C%2Fview%3E%5C%5Cn%3Ccolumn%3ELC_BIOME_EHR_age_group_2%3C%5C%5C%2Fcolumn%3E%5C%5Cn%3Caggregation%3ENONE%3C%5C%5C%2Faggregation%3E%5C%5Cn%3C%5C%5C%2Fselection%3E%5C%5Cn%3C%5C%5C%2Fselections%3E%5C%5Cn%3Cconstraints%5C%5C%2F%3E%5C%5Cn%3Corders%5C%5C%2F%3E%5C%5Cn%3C%5C%5C%2Fmql%3E%5C%22%7D%7D%22%5D%2C%5B%22xdash%22%2C%22%22%2C%22%2Fpublic%2FbioMe%2F10-Dashboards%2FHealthOutcomesComparison.xdash%22%5D%2C%5B%22component%22%2C%22%22%2C%22pov_widget_2%22%5D%5D%2C%22defaultValue%22%3Anull%2C%22logColor%22%3A%22rgb(149%2C127%2C159)%22%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A41.531Z%22%2C%22elapsedSinceSplit%22%3A1589%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22url%22%3A%22dashboards%22%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Atrue%2C%22currentVal%22%3Anull%2C%22filterType%22%3A%22mql%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_3%22%2C%22GUID%22%3A%2298819%22%2C%22verticalOrientation%22%3Atrue%2C%22isMultiple%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.944Z%22%2C%22type%22%3A%22multiButtonComponent%22%2C%22title%22%3A%22Age%20Prompt%22%2C%22parameter%22%3A%22AgePrompt1443095865281%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_3%22%2C%22elapsedSinceStart%22%3A2392%2C%22parameters%22%3A%5B%5B%22command%22%2C%22%22%2C%22listmql%22%5D%2C%5B%22lblidx%22%2C%22%22%2C%220%22%5D%2C%5B%22validx%22%2C%22%22%2C%220%22%5D%2C%5B%22filterColumns%22%2C%22%22%2C%22true%22%5D%2C%5B%22dataSourceName%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22mql%22%2C%22%22%2C%22%3C%3Fxml%20version%3D%5C%221.0%5C%22%20encoding%3D%5C%22UTF-8%5C%22%3F%3E%5Cn%3Cmql%3E%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%2Fdomain_id%3E%5Cn%3Cmodel_id%3EMODEL_1%3C%2Fmodel_id%3E%5Cn%3Coptions%3E%5Cn%3Cdisable_distinct%3Efalse%3C%2Fdisable_distinct%3E%5Cn%3Climit%3E-1%3C%2Flimit%3E%5Cn%3C%2Foptions%3E%5Cn%3Cselections%3E%5Cn%3Cselection%3E%5Cn%3Cview%3EPatient_Group%3C%2Fview%3E%5Cn%3Ccolumn%3ELC_BIOME_EHR_age_group_2%3C%2Fcolumn%3E%5Cn%3Caggregation%3ENONE%3C%2Faggregation%3E%5Cn%3C%2Fselection%3E%5Cn%3C%2Fselections%3E%5Cn%3Cconstraints%2F%3E%5Cn%3Corders%2F%3E%5Cn%3C%2Fmql%3E%22%5D%2C%5B%22modelId%22%2C%22%22%2C%22MODEL_1%22%5D%2C%5B%22domainId%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22jsMql%22%2C%22%22%2C%22%7B%5C%22MQLQuery%5C%22%3A%7B%5C%22cols%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.beans.Column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_age_group_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Age%20group%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%5D%2C%5C%22limit%5C%22%3A-1%2C%5C%22domain%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22default%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22model%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22MODEL_1%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22query%5C%22%3A%5C%22%3C%3Fxml%20version%3D%5C%5C%5C%221.0%5C%5C%5C%22%20encoding%3D%5C%5C%5C%22UTF-8%5C%5C%5C%22%3F%3E%5C%5Cn%3Cmql%3E%5C%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%5C%5C%2Fdomain_id%3E%5C%5Cn%3Cmodel_id%3EMODEL_1%3C%5C%5C%2Fmodel_id%3E%5C%5Cn%3Coptions%3E%5C%5Cn%3Cdisable_distinct%3Efalse%3C%5C%5C%2Fdisable_distinct%3E%5C%5Cn%3Climit%3E-1%3C%5C%5C%2Flimit%3E%5C%5Cn%3C%5C%5C%2Foptions%3E%5C%5Cn%3Cselections%3E%5C%5Cn%3Cselection%3E%5C%5Cn%3Cview%3EPatient_Group%3C%5C%5C%2Fview%3E%5C%5Cn%3Ccolumn%3ELC_BIOME_EHR_age_group_2%3C%5C%5C%2Fcolumn%3E%5C%5Cn%3Caggregation%3ENONE%3C%5C%5C%2Faggregation%3E%5C%5Cn%3C%5C%5C%2Fselection%3E%5C%5Cn%3C%5C%5C%2Fselections%3E%5C%5Cn%3Cconstraints%5C%5C%2F%3E%5C%5Cn%3Corders%5C%5C%2F%3E%5C%5Cn%3C%5C%5C%2Fmql%3E%5C%22%7D%7D%22%5D%2C%5B%22xdash%22%2C%22%22%2C%22%2Fpublic%2FbioMe%2F10-Dashboards%2FHealthOutcomesComparison.xdash%22%5D%2C%5B%22component%22%2C%22%22%2C%22pov_widget_3%22%5D%5D%2C%22defaultValue%22%3A%2211%20to%2020%22%2C%22logColor%22%3A%22rgb(148%2C126%2C159)%22%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A42.336Z%22%2C%22elapsedSinceSplit%22%3A2392%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22url%22%3A%22dashboards%22%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22cachedArray%22%3A%5B%5D%2C%22filterType%22%3A%22mql%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_5%22%2C%22GUID%22%3A%2253021%22%2C%22verticalOrientation%22%3Atrue%2C%22isMultiple%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.945Z%22%2C%22type%22%3A%22selectMultiComponent%22%2C%22title%22%3A%22Medical%20Prompt%22%2C%22parameter%22%3A%22Medical%20Prompt1443171404918%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_5%22%2C%22elapsedSinceStart%22%3A3134%2C%22parameters%22%3A%5B%5B%22command%22%2C%22%22%2C%22listmql%22%5D%2C%5B%22lblidx%22%2C%22%22%2C%220%22%5D%2C%5B%22validx%22%2C%22%22%2C%220%22%5D%2C%5B%22filterColumns%22%2C%22%22%2C%22true%22%5D%2C%5B%22dataSourceName%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22mql%22%2C%22%22%2C%22%3C%3Fxml%20version%3D%5C%221.0%5C%22%20encoding%3D%5C%22UTF-8%5C%22%3F%3E%5Cn%3Cmql%3E%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%2Fdomain_id%3E%5Cn%3Cmodel_id%3EMODEL_1%3C%2Fmodel_id%3E%5Cn%3Coptions%3E%5Cn%3Cdisable_distinct%3Efalse%3C%2Fdisable_distinct%3E%5Cn%3Climit%3E-1%3C%2Flimit%3E%5Cn%3C%2Foptions%3E%5Cn%3Cselections%3E%5Cn%3Cselection%3E%5Cn%3Cview%3EMedical%3C%2Fview%3E%5Cn%3Ccolumn%3ELC_BIOME_EHR_med_cond_2%3C%2Fcolumn%3E%5Cn%3Caggregation%3ENONE%3C%2Faggregation%3E%5Cn%3C%2Fselection%3E%5Cn%3C%2Fselections%3E%5Cn%3Cconstraints%3E%5Cn%3Cconstraint%3E%5Cn%3Coperator%3EAND%3C%2Foperator%3E%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%22Obesity%5C%22)%3C%2Fcondition%3E%5Cn%3C%2Fconstraint%3E%5Cn%3Cconstraint%3E%5Cn%3Coperator%3EOR%3C%2Foperator%3E%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%22Diabetes%5C%22)%3C%2Fcondition%3E%5Cn%3C%2Fconstraint%3E%5Cn%3Cconstraint%3E%5Cn%3Coperator%3EOR%3C%2Foperator%3E%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%22null%5C%22)%3C%2Fcondition%3E%5Cn%3C%2Fconstraint%3E%5Cn%3Cconstraint%3E%5Cn%3Coperator%3EOR%3C%2Foperator%3E%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%22Hypertension%5C%22)%3C%2Fcondition%3E%5Cn%3C%2Fconstraint%3E%5Cn%3Cconstraint%3E%5Cn%3Coperator%3EOR%3C%2Foperator%3E%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%22Heart%20Disease%5C%22)%3C%2Fcondition%3E%5Cn%3C%2Fconstraint%3E%5Cn%3Cconstraint%3E%5Cn%3Coperator%3EOR%3C%2Foperator%3E%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%22None%5C%22)%3C%2Fcondition%3E%5Cn%3C%2Fconstraint%3E%5Cn%3C%2Fconstraints%3E%5Cn%3Corders%2F%3E%5Cn%3C%2Fmql%3E%22%5D%2C%5B%22modelId%22%2C%22%22%2C%22MODEL_1%22%5D%2C%5B%22domainId%22%2C%22%22%2C%22BioMe%20EHR%22%5D%2C%5B%22jsMql%22%2C%22%22%2C%22%7B%5C%22MQLQuery%5C%22%3A%7B%5C%22cols%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.beans.Column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_med_cond_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Med%20cond%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%5D%2C%5C%22conditions%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.beans.Condition%5C%22%3A%5B%7B%5C%22condition%5C%22%3A%7B%5C%22%40combinationType%5C%22%3A%5C%22AND%5C%22%2C%5C%22%40defaultValue%5C%22%3A%5C%22%5C%22%2C%5C%22%40operator%5C%22%3A%5C%22exactly%20matches%5C%22%2C%5C%22%40selectedAggType%5C%22%3A%5C%22%5C%22%2C%5C%22%40value%5C%22%3A%5C%22Obesity%5C%22%2C%5C%22column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_med_cond_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Med%20cond%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%7D%2C%7B%5C%22condition%5C%22%3A%7B%5C%22%40combinationType%5C%22%3A%5C%22OR%5C%22%2C%5C%22%40defaultValue%5C%22%3A%5C%22%5C%22%2C%5C%22%40operator%5C%22%3A%5C%22exactly%20matches%5C%22%2C%5C%22%40selectedAggType%5C%22%3A%5C%22%5C%22%2C%5C%22%40value%5C%22%3A%5C%22Diabetes%5C%22%2C%5C%22column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_med_cond_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Med%20cond%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%7D%2C%7B%5C%22condition%5C%22%3A%7B%5C%22%40combinationType%5C%22%3A%5C%22OR%5C%22%2C%5C%22%40defaultValue%5C%22%3A%5C%22null%5C%22%2C%5C%22%40operator%5C%22%3A%5C%22exactly%20matches%5C%22%2C%5C%22%40selectedAggType%5C%22%3A%5C%22%5C%22%2C%5C%22%40value%5C%22%3A%5C%22null%5C%22%2C%5C%22column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_med_cond_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Med%20cond%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%7D%2C%7B%5C%22condition%5C%22%3A%7B%5C%22%40combinationType%5C%22%3A%5C%22OR%5C%22%2C%5C%22%40defaultValue%5C%22%3A%5C%22%5C%22%2C%5C%22%40operator%5C%22%3A%5C%22exactly%20matches%5C%22%2C%5C%22%40selectedAggType%5C%22%3A%5C%22%5C%22%2C%5C%22%40value%5C%22%3A%5C%22Hypertension%5C%22%2C%5C%22column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_med_cond_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Med%20cond%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%7D%2C%7B%5C%22condition%5C%22%3A%7B%5C%22%40combinationType%5C%22%3A%5C%22OR%5C%22%2C%5C%22%40defaultValue%5C%22%3A%5C%22%5C%22%2C%5C%22%40operator%5C%22%3A%5C%22exactly%20matches%5C%22%2C%5C%22%40selectedAggType%5C%22%3A%5C%22%5C%22%2C%5C%22%40value%5C%22%3A%5C%22Heart%20Disease%5C%22%2C%5C%22column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_med_cond_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Med%20cond%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%7D%2C%7B%5C%22condition%5C%22%3A%7B%5C%22%40combinationType%5C%22%3A%5C%22OR%5C%22%2C%5C%22%40defaultValue%5C%22%3A%5C%22%5C%22%2C%5C%22%40operator%5C%22%3A%5C%22exactly%20matches%5C%22%2C%5C%22%40selectedAggType%5C%22%3A%5C%22%5C%22%2C%5C%22%40value%5C%22%3A%5C%22None%5C%22%2C%5C%22column%5C%22%3A%7B%5C%22id%5C%22%3A%5C%22LC_BIOME_EHR_med_cond_2%5C%22%2C%5C%22name%5C%22%3A%5C%22Med%20cond%5C%22%2C%5C%22type%5C%22%3A%5C%22TEXT%5C%22%2C%5C%22aggTypes%5C%22%3A%5B%7B%5C%22org.pentaho.commons.metadata.mqleditor.AggType%5C%22%3A%5B%5C%22NONE%5C%22%2C%5C%22COUNT%5C%22%2C%5C%22COUNT_DISTINCT%5C%22%5D%7D%5D%2C%5C%22defaultAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22selectedAggType%5C%22%3A%5C%22NONE%5C%22%2C%5C%22persistent%5C%22%3Afalse%7D%7D%7D%5D%7D%5D%2C%5C%22limit%5C%22%3A-1%2C%5C%22domain%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22default%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22model%5C%22%3A%7B%5C%22%40id%5C%22%3A%5C%22MODEL_1%5C%22%2C%5C%22%40name%5C%22%3A%5C%22BioMe%20EHR%5C%22%7D%2C%5C%22query%5C%22%3A%5C%22%3C%3Fxml%20version%3D%5C%5C%5C%221.0%5C%5C%5C%22%20encoding%3D%5C%5C%5C%22UTF-8%5C%5C%5C%22%3F%3E%5C%5Cn%3Cmql%3E%5C%5Cn%3Cdomain_id%3EBioMe%20EHR%3C%5C%5C%2Fdomain_id%3E%5C%5Cn%3Cmodel_id%3EMODEL_1%3C%5C%5C%2Fmodel_id%3E%5C%5Cn%3Coptions%3E%5C%5Cn%3Cdisable_distinct%3Efalse%3C%5C%5C%2Fdisable_distinct%3E%5C%5Cn%3Climit%3E-1%3C%5C%5C%2Flimit%3E%5C%5Cn%3C%5C%5C%2Foptions%3E%5C%5Cn%3Cselections%3E%5C%5Cn%3Cselection%3E%5C%5Cn%3Cview%3EMedical%3C%5C%5C%2Fview%3E%5C%5Cn%3Ccolumn%3ELC_BIOME_EHR_med_cond_2%3C%5C%5C%2Fcolumn%3E%5C%5Cn%3Caggregation%3ENONE%3C%5C%5C%2Faggregation%3E%5C%5Cn%3C%5C%5C%2Fselection%3E%5C%5Cn%3C%5C%5C%2Fselections%3E%5C%5Cn%3Cconstraints%3E%5C%5Cn%3Cconstraint%3E%5C%5Cn%3Coperator%3EAND%3C%5C%5C%2Foperator%3E%5C%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%5C%5C%22Obesity%5C%5C%5C%22)%3C%5C%5C%2Fcondition%3E%5C%5Cn%3C%5C%5C%2Fconstraint%3E%5C%5Cn%3Cconstraint%3E%5C%5Cn%3Coperator%3EOR%3C%5C%5C%2Foperator%3E%5C%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%5C%5C%22Diabetes%5C%5C%5C%22)%3C%5C%5C%2Fcondition%3E%5C%5Cn%3C%5C%5C%2Fconstraint%3E%5C%5Cn%3Cconstraint%3E%5C%5Cn%3Coperator%3EOR%3C%5C%5C%2Foperator%3E%5C%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%5C%5C%22null%5C%5C%5C%22)%3C%5C%5C%2Fcondition%3E%5C%5Cn%3C%5C%5C%2Fconstraint%3E%5C%5Cn%3Cconstraint%3E%5C%5Cn%3Coperator%3EOR%3C%5C%5C%2Foperator%3E%5C%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%5C%5C%22Hypertension%5C%5C%5C%22)%3C%5C%5C%2Fcondition%3E%5C%5Cn%3C%5C%5C%2Fconstraint%3E%5C%5Cn%3Cconstraint%3E%5C%5Cn%3Coperator%3EOR%3C%5C%5C%2Foperator%3E%5C%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%5C%5C%22Heart%20Disease%5C%5C%5C%22)%3C%5C%5C%2Fcondition%3E%5C%5Cn%3C%5C%5C%2Fconstraint%3E%5C%5Cn%3Cconstraint%3E%5C%5Cn%3Coperator%3EOR%3C%5C%5C%2Foperator%3E%5C%5Cn%3Ccondition%3EEQUALS(%5BMedical.LC_BIOME_EHR_med_cond_2%5D%3B%5C%5C%5C%22None%5C%5C%5C%22)%3C%5C%5C%2Fcondition%3E%5C%5Cn%3C%5C%5C%2Fconstraint%3E%5C%5Cn%3C%5C%5C%2Fconstraints%3E%5C%5Cn%3Corders%5C%5C%2F%3E%5C%5Cn%3C%5C%5C%2Fmql%3E%5C%22%7D%7D%22%5D%2C%5B%22xdash%22%2C%22%22%2C%22%2Fpublic%2FbioMe%2F10-Dashboards%2FHealthOutcomesComparison.xdash%22%5D%2C%5B%22component%22%2C%22%22%2C%22pov_widget_5%22%5D%5D%2C%22defaultValue%22%3A%22Obesity%22%2C%22logColor%22%3A%22rgb(148%2C123%2C159)%22%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A43.079Z%22%2C%22elapsedSinceSplit%22%3A3133%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22url%22%3A%22dashboards%22%2C%22size%22%3A%22100%22%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22filterType%22%3A%22mql%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_5%22%2C%22GUID%22%3A%2253021%22%2C%22verticalOrientation%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22isMultiple%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.948Z%22%2C%22type%22%3A%22selectMultiComponent%22%2C%22title%22%3A%22Medical%20Prompt%22%2C%22parameter%22%3A%22Medical%20Prompt1443171404918%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_5%22%2C%22elapsedSinceStart%22%3A3132%2C%22parameters%22%3A%5B%5D%2C%22defaultValue%22%3A%22Obesity%22%2C%22logColor%22%3A%22rgb(148%2C123%2C159)%22%2C%22valuesArray%22%3A%5B%5B%22Obesity%22%2C%22Obesity%22%5D%2C%5B%22Hypertension%22%2C%22Hypertension%22%5D%2C%5B%22None%22%2C%22None%22%5D%2C%5B%22Diabetes%22%2C%22Diabetes%22%5D%2C%5B%22Heart%20Disease%22%2C%22Heart%20Disease%22%5D%5D%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A43.080Z%22%2C%22elapsedSinceSplit%22%3A3131%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22filterType%22%3A%22static%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_6%22%2C%22GUID%22%3A%2231090%22%2C%22verticalOrientation%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22isMultiple%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.950Z%22%2C%22type%22%3A%22selectMultiComponent%22%2C%22title%22%3A%22Gender%20Prompt%22%2C%22parameter%22%3A%22Gender1443174854848%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_6%22%2C%22elapsedSinceStart%22%3A3130%2C%22parameters%22%3A%5B%5D%2C%22defaultValue%22%3A%22Male%22%2C%22logColor%22%3A%22rgb(147%2C122%2C159)%22%2C%22valuesArray%22%3A%5B%5B%22Male%22%2C%22Male%22%5D%2C%5B%22Female%22%2C%22Female%22%5D%5D%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A43.080Z%22%2C%22elapsedSinceSplit%22%3A3130%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22filterType%22%3A%22static%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_7%22%2C%22GUID%22%3A%2269198%22%2C%22verticalOrientation%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22isMultiple%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.953Z%22%2C%22type%22%3A%22selectMultiComponent%22%2C%22title%22%3A%22Age%20Prompt%22%2C%22parameter%22%3A%22Age1443174907344%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_7%22%2C%22elapsedSinceStart%22%3A3128%2C%22parameters%22%3A%5B%5D%2C%22defaultValue%22%3A%2221%20to%2030%22%2C%22logColor%22%3A%22rgb(147%2C121%2C159)%22%2C%22valuesArray%22%3A%5B%5B%2211%20to%2020%22%2C%2211%20to%2020%22%5D%2C%5B%2221%20to%2030%22%2C%2221%20to%2030%22%5D%2C%5B%2231%20to%2040%22%2C%2231%20to%2040%22%5D%2C%5B%2241%20to%2050%22%2C%2241%20to%2050%22%5D%5D%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A43.081Z%22%2C%22elapsedSinceSplit%22%3A3128%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22filterType%22%3A%22static%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_8%22%2C%22GUID%22%3A%2213815%22%2C%22verticalOrientation%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22isMultiple%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.954Z%22%2C%22type%22%3A%22selectMultiComponent%22%2C%22title%22%3A%22Age%20Prompt%22%2C%22parameter%22%3A%22Age1443178709315%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_8%22%2C%22elapsedSinceStart%22%3A3127%2C%22parameters%22%3A%5B%5D%2C%22defaultValue%22%3A%2211%20to%2020%22%2C%22logColor%22%3A%22rgb(147%2C120%2C159)%22%2C%22valuesArray%22%3A%5B%5B%2211%20to%2020%22%2C%2211%20to%2020%22%5D%2C%5B%2221%20to%2030%22%2C%2221%20to%2030%22%5D%5D%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A43.081Z%22%2C%22elapsedSinceSplit%22%3A3127%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22filterType%22%3A%22static%22%2C%22separator%22%3Anull%7D%2C%7B%22htmlObject%22%3A%22widgetContainer-content-pov_widget_8%22%2C%22GUID%22%3A%2213815%22%2C%22verticalOrientation%22%3Atrue%2C%22valueAsId%22%3Afalse%2C%22isMultiple%22%3Atrue%2C%22originalName%22%3Anull%2C%22initInstance%22%3A%220%22%2C%22timerStart%22%3A%222015-09-28T18%3A23%3A39.955Z%22%2C%22type%22%3A%22selectMultiComponent%22%2C%22title%22%3A%22Age%20Prompt%22%2C%22parameter%22%3A%22Age1443178709315%22%2C%22runCounter%22%3A%220%22%2C%22name%22%3A%22pov_widget_8%22%2C%22elapsedSinceStart%22%3A3126%2C%22parameters%22%3A%5B%5D%2C%22defaultValue%22%3A%220%20to%2010%7C11%20to%2020%7C21%20to%2030%7C31%20to%2040%7C41%20to%2050%7C51%20to%2060%7C61%20to%2070%7C71%20to%2080%7C81%20to%2090%22%2C%22logColor%22%3A%22rgb(147%2C120%2C159)%22%2C%22valuesArray%22%3A%5B%5B%220%20to%2010%22%2C%220%20to%2010%22%5D%2C%5B%2211%20to%2020%22%2C%2211%20to%2020%22%5D%2C%5B%2221%20to%2030%22%2C%2221%20to%2030%22%5D%2C%5B%2231%20to%2040%22%2C%2231%20to%2040%22%5D%2C%5B%2241%20to%2050%22%2C%2241%20to%2050%22%5D%2C%5B%2251%20to%2060%22%2C%2251%20to%2060%22%5D%2C%5B%2261%20to%2070%22%2C%2261%20to%2070%22%5D%5D%2C%22isRunning%22%3Afalse%2C%22timerSplit%22%3A%222015-09-28T18%3A23%3A43.081Z%22%2C%22elapsedSinceSplit%22%3A3126%2C%22defaultIfEmpty%22%3Atrue%2C%22refreshPeriod%22%3A0%2C%22executeAtStart%22%3Atrue%2C%22useFirstValue%22%3Afalse%2C%22filterType%22%3A%22static%22%2C%22separator%22%3Anull%7D%2C%7B%22type%22%3A%22selectMultiComponent%22%2C%22name%22%3A%22pov_widget_9%22%2C%22parameter%22%3A%22Medical%20Prompt1443191356638%22%2C%22htmlObject%22%3A%22widgetContainer-content-pov_widget_9%22%2C%22valueAsId%22%3Afalse%2C%22executeAtStart%22%3Atrue%2C%22defaultIfEmpty%22%3Atrue%2C%22verticalOrientation%22%3Atrue%2C%22separator%22%3Anull%2C%22originalName%22%3Anull%2C%22title%22%3A%22Medical%20Prompt%22%2C%22useFirstValue%22%3Afalse%2C%22isMultiple%22%3Atrue%2C%22filterType%22%3A%22static%22%2C%22parameters%22%3A%5B%5D%2C%22valuesArray%22%3A%5B%5B%22Diabetes%22%2C%22Diabetes%22%5D%2C%5B%22Heart%20Disease%22%2C%22Heart%20Disease%22%5D%2C%5B%22Hypertension%22%2C%22Hypertension%22%5D%2C%5B%22Obesity%22%2C%22Obesity%22%5D%2C%5B%22None%22%2C%22None%22%5D%5D%2C%22defaultValue%22%3A%22Heart%20Disease%22%2C%22GUID%22%3A%2253658%22%7D%5D]]></widgetJavascript>
+<widgets><widget jsonType="object"><listeners jsonType="string" jsonIsArray="true">Gender Prompt1443191461655</listeners><listeners jsonType="string" jsonIsArray="true">Medical Prompt1443191356638</listeners><listeners jsonType="string" jsonIsArray="true">Medical Prompt1443191356638</listeners><htmlObject jsonType="string">content-area-Panel_1</htmlObject><GUID jsonType="string">75745</GUID><isDirty jsonType="string">false</isDirty><timerSplit jsonType="string">2015-09-28T18:23:50.912Z</timerSplit><elapsedSinceSplit jsonType="string">1</elapsedSinceSplit><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:50.904Z</timerStart><type jsonType="string">AnalyzerComponent</type><refreshPeriod jsonType="string">0</refreshPeriod><solution jsonType="string"/><staticParameters jsonType="string">true</staticParameters><xactionPath jsonType="string">/public/bioMe/10-Dashboards/Reports/BMIAnalysis.xanalyzer</xactionPath><outputParameters jsonType="object"><parameter0 jsonType="object"><id jsonType="string">75745__dollar_[Device Info.Months since device activation].[Months since device activation]</id><enabled jsonType="string">false</enabled><name jsonType="string">Months since device activation</name></parameter0></outputParameters><localizedName jsonType="string">BMI Analysis</localizedName><iframe jsonType="string">true</iframe><cl jsonType="string"/><name jsonType="string">widget1</name><path jsonType="string">/public/bioMe/10-Dashboards/Reports/BMIAnalysis.xanalyzer</path><action jsonType="string">BMIAnalysis.xanalyzer</action><elapsedSinceStart jsonType="string">8</elapsedSinceStart><parameters jsonType="object"><parameter0 jsonType="object"><const jsonType="string">Male</const><var jsonType="string">Gender Prompt1443191461655</var><name jsonType="string">genderParam</name></parameter0><parameter1 jsonType="object"><const jsonType="string">Obesity</const><var jsonType="string">Medical Prompt1443191356638</var><name jsonType="string">medParam</name></parameter1></parameters><logColor jsonType="string">rgb(85,184,83)</logColor></widget><widget jsonType="object"><listeners jsonType="string" jsonIsArray="true">Gender Prompt1443191461655</listeners><listeners jsonType="string" jsonIsArray="true">Medical Prompt1443191356638</listeners><listeners jsonType="string" jsonIsArray="true">Medical Prompt1443191356638</listeners><htmlObject jsonType="string">content-area-Panel_2</htmlObject><GUID jsonType="string">76137</GUID><isDirty jsonType="string">false</isDirty><timerSplit jsonType="string">2015-09-28T18:23:50.913Z</timerSplit><elapsedSinceSplit jsonType="string">1</elapsedSinceSplit><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:50.905Z</timerStart><type jsonType="string">AnalyzerComponent</type><refreshPeriod jsonType="string">0</refreshPeriod><solution jsonType="string"/><staticParameters jsonType="string">true</staticParameters><xactionPath jsonType="string">/public/bioMe/10-Dashboards/Reports/CaloriesAnalysis.xanalyzer</xactionPath><outputParameters jsonType="object"><parameter0 jsonType="object"><id jsonType="string">76137__dollar_[Device Info.Months since device activation].[Months since device activation]</id><enabled jsonType="string">false</enabled><name jsonType="string">Months since device activation</name></parameter0></outputParameters><localizedName jsonType="string">Calories Analysis</localizedName><iframe jsonType="string">true</iframe><cl jsonType="string"/><name jsonType="string">widget2</name><path jsonType="string">/public/bioMe/10-Dashboards/Reports/CaloriesAnalysis.xanalyzer</path><action jsonType="string">CaloriesAnalysis.xanalyzer</action><elapsedSinceStart jsonType="string">8</elapsedSinceStart><parameters jsonType="object"><parameter0 jsonType="object"><const jsonType="string">Male</const><var jsonType="string">Gender Prompt1443191461655</var><name jsonType="string">genderParam</name></parameter0><parameter1 jsonType="object"><const jsonType="string">Obesity</const><var jsonType="string">Medical Prompt1443191356638</var><name jsonType="string">medParam</name></parameter1></parameters><logColor jsonType="string">rgb(84,184,82)</logColor></widget><widget jsonType="object"><listeners jsonType="string" jsonIsArray="true">Gender Prompt1443191461655</listeners><listeners jsonType="string" jsonIsArray="true">Medical Prompt1443191356638</listeners><listeners jsonType="string" jsonIsArray="true">Medical Prompt1443191356638</listeners><htmlObject jsonType="string">content-area-Panel_3</htmlObject><GUID jsonType="string">66978</GUID><isDirty jsonType="string">false</isDirty><timerSplit jsonType="string">2015-09-28T18:23:50.913Z</timerSplit><elapsedSinceSplit jsonType="string">0</elapsedSinceSplit><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:50.906Z</timerStart><type jsonType="string">AnalyzerComponent</type><refreshPeriod jsonType="string">0</refreshPeriod><solution jsonType="string"/><staticParameters jsonType="string">true</staticParameters><xactionPath jsonType="string">/public/bioMe/10-Dashboards/Reports/SystolicAnalysis.xanalyzer</xactionPath><outputParameters jsonType="object"><parameter0 jsonType="object"><id jsonType="string">66978__dollar_[Device Info.Months since device activation].[Months since device activation]</id><enabled jsonType="string">false</enabled><name jsonType="string">Months since device activation</name></parameter0></outputParameters><localizedName jsonType="string">Systolic Analysis</localizedName><iframe jsonType="string">true</iframe><cl jsonType="string"/><name jsonType="string">widget3</name><path jsonType="string">/public/bioMe/10-Dashboards/Reports/SystolicAnalysis.xanalyzer</path><action jsonType="string">SystolicAnalysis.xanalyzer</action><elapsedSinceStart jsonType="string">7</elapsedSinceStart><parameters jsonType="object"><parameter0 jsonType="object"><const jsonType="string">Male</const><var jsonType="string">Gender Prompt1443191461655</var><name jsonType="string">genderParam</name></parameter0><parameter1 jsonType="object"><const jsonType="string">Obesity</const><var jsonType="string">Medical Prompt1443191356638</var><name jsonType="string">medParam</name></parameter1></parameters><logColor jsonType="string">rgb(83,184,81)</logColor></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_1</htmlObject><GUID jsonType="string">75084</GUID><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.936Z</timerStart><type jsonType="string">select</type><title jsonType="string">Type</title><parameter jsonType="string">Type1443015930343</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_1</name><elapsedSinceStart jsonType="string">49</elapsedSinceStart><parameters jsonType="object"/><defaultValue isNull="true"/><logColor jsonType="string">rgb(149,128,159)</logColor><valuesArray jsonType="string" jsonIsArray="true">Gender</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Gender</valuesArray><valuesArray jsonType="string" jsonIsArray="true">BPM</valuesArray><valuesArray jsonType="string" jsonIsArray="true">BPM</valuesArray><valuesArray jsonType="string" jsonIsArray="true">BMI</valuesArray><valuesArray jsonType="string" jsonIsArray="true">BMI</valuesArray><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:39.985Z</timerSplit><elapsedSinceSplit jsonType="string">49</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><_defaultValueInitialized jsonType="string">true</_defaultValueInitialized><refreshPeriod jsonType="string">0</refreshPeriod><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">true</useFirstValue><filterType jsonType="string">static</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_10</htmlObject><GUID jsonType="string">71277</GUID><isMultiple jsonType="string">true</isMultiple><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.938Z</timerStart><type jsonType="string">selectMultiComponent</type><title jsonType="string">Gender Prompt</title><parameter jsonType="string">Gender Prompt1443191461655</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_10</name><elapsedSinceStart jsonType="string">48</elapsedSinceStart><parameters jsonType="object"/><defaultValue jsonType="string">Male</defaultValue><logColor jsonType="string">rgb(164,190,179)</logColor><valuesArray jsonType="string" jsonIsArray="true">Female</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Female</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Male</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Male</valuesArray><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:39.986Z</timerSplit><elapsedSinceSplit jsonType="string">48</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">static</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_2</htmlObject><GUID jsonType="string">34106</GUID><verticalOrientation jsonType="string">true</verticalOrientation><valueAsId jsonType="string">false</valueAsId><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.940Z</timerStart><type jsonType="string">checkComponent</type><title jsonType="string">AgePrompt</title><parameter jsonType="string">AgePrompt1443090198296</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_2</name><elapsedSinceStart jsonType="string">777</elapsedSinceStart><parameters jsonType="object"><parameter0 jsonType="object"><const jsonType="string">listmql</const><var jsonType="string"/><name jsonType="string">command</name></parameter0><parameter9 jsonType="object"><const jsonType="string">/public/bioMe/10-Dashboards/HealthOutcomesComparison.xdash</const><var jsonType="string"/><name jsonType="string">xdash</name></parameter9><parameter10 jsonType="object"><const jsonType="string">pov_widget_2</const><var jsonType="string"/><name jsonType="string">component</name></parameter10><parameter6 jsonType="object"><const jsonType="string">MODEL_1</const><var jsonType="string"/><name jsonType="string">modelId</name></parameter6><parameter5 jsonType="object"><const jsonType="string">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;mql&gt;
+&lt;domain_id&gt;BioMe EHR&lt;/domain_id&gt;
+&lt;model_id&gt;MODEL_1&lt;/model_id&gt;
+&lt;options&gt;
+&lt;disable_distinct&gt;false&lt;/disable_distinct&gt;
+&lt;limit&gt;-1&lt;/limit&gt;
+&lt;/options&gt;
+&lt;selections&gt;
+&lt;selection&gt;
+&lt;view&gt;Patient_Group&lt;/view&gt;
+&lt;column&gt;LC_BIOME_EHR_age_group_2&lt;/column&gt;
+&lt;aggregation&gt;NONE&lt;/aggregation&gt;
+&lt;/selection&gt;
+&lt;/selections&gt;
+&lt;constraints/&gt;
+&lt;orders/&gt;
+&lt;/mql&gt;</const><var jsonType="string"/><name jsonType="string">mql</name></parameter5><parameter8 jsonType="object"><const jsonType="string">{"MQLQuery":{"cols":[{"org.pentaho.commons.metadata.mqleditor.beans.Column":{"id":"LC_BIOME_EHR_age_group_2","name":"Age group","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}],"limit":-1,"domain":{"__at_id":"default","__at_name":"BioMe EHR"},"model":{"__at_id":"MODEL_1","__at_name":"BioMe EHR"},"query":"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;mql&gt;\n&lt;domain_id&gt;BioMe EHR&lt;\/domain_id&gt;\n&lt;model_id&gt;MODEL_1&lt;\/model_id&gt;\n&lt;options&gt;\n&lt;disable_distinct&gt;false&lt;\/disable_distinct&gt;\n&lt;limit&gt;-1&lt;\/limit&gt;\n&lt;\/options&gt;\n&lt;selections&gt;\n&lt;selection&gt;\n&lt;view&gt;Patient_Group&lt;\/view&gt;\n&lt;column&gt;LC_BIOME_EHR_age_group_2&lt;\/column&gt;\n&lt;aggregation&gt;NONE&lt;\/aggregation&gt;\n&lt;\/selection&gt;\n&lt;\/selections&gt;\n&lt;constraints\/&gt;\n&lt;orders\/&gt;\n&lt;\/mql&gt;"}}</const><var jsonType="string"/><name jsonType="string">jsMql</name></parameter8><parameter7 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">domainId</name></parameter7><parameter2 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">validx</name></parameter2><parameter1 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">lblidx</name></parameter1><parameter4 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">dataSourceName</name></parameter4><parameter3 jsonType="object"><const jsonType="string">true</const><var jsonType="string"/><name jsonType="string">filterColumns</name></parameter3></parameters><defaultValue isNull="true"/><logColor jsonType="string">rgb(149,127,159)</logColor><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:40.717Z</timerSplit><elapsedSinceSplit jsonType="string">777</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><url jsonType="string">dashboards</url><executeAtStart jsonType="string">true</executeAtStart><currentVal isNull="true"/><useFirstValue jsonType="string">true</useFirstValue><filterType jsonType="string">mql</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_2</htmlObject><GUID jsonType="string">34106</GUID><verticalOrientation jsonType="string">true</verticalOrientation><valueAsId jsonType="string">false</valueAsId><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.942Z</timerStart><type jsonType="string">checkComponent</type><title jsonType="string">AgePrompt</title><parameter jsonType="string">AgePrompt1443090198296</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_2</name><elapsedSinceStart jsonType="string">1589</elapsedSinceStart><parameters jsonType="object"><parameter0 jsonType="object"><const jsonType="string">listmql</const><var jsonType="string"/><name jsonType="string">command</name></parameter0><parameter9 jsonType="object"><const jsonType="string">/public/bioMe/10-Dashboards/HealthOutcomesComparison.xdash</const><var jsonType="string"/><name jsonType="string">xdash</name></parameter9><parameter10 jsonType="object"><const jsonType="string">pov_widget_2</const><var jsonType="string"/><name jsonType="string">component</name></parameter10><parameter6 jsonType="object"><const jsonType="string">MODEL_1</const><var jsonType="string"/><name jsonType="string">modelId</name></parameter6><parameter5 jsonType="object"><const jsonType="string">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;mql&gt;
+&lt;domain_id&gt;BioMe EHR&lt;/domain_id&gt;
+&lt;model_id&gt;MODEL_1&lt;/model_id&gt;
+&lt;options&gt;
+&lt;disable_distinct&gt;false&lt;/disable_distinct&gt;
+&lt;limit&gt;-1&lt;/limit&gt;
+&lt;/options&gt;
+&lt;selections&gt;
+&lt;selection&gt;
+&lt;view&gt;Patient_Group&lt;/view&gt;
+&lt;column&gt;LC_BIOME_EHR_age_group_2&lt;/column&gt;
+&lt;aggregation&gt;NONE&lt;/aggregation&gt;
+&lt;/selection&gt;
+&lt;/selections&gt;
+&lt;constraints/&gt;
+&lt;orders/&gt;
+&lt;/mql&gt;</const><var jsonType="string"/><name jsonType="string">mql</name></parameter5><parameter8 jsonType="object"><const jsonType="string">{"MQLQuery":{"cols":[{"org.pentaho.commons.metadata.mqleditor.beans.Column":{"id":"LC_BIOME_EHR_age_group_2","name":"Age group","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}],"limit":-1,"domain":{"__at_id":"default","__at_name":"BioMe EHR"},"model":{"__at_id":"MODEL_1","__at_name":"BioMe EHR"},"query":"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;mql&gt;\n&lt;domain_id&gt;BioMe EHR&lt;\/domain_id&gt;\n&lt;model_id&gt;MODEL_1&lt;\/model_id&gt;\n&lt;options&gt;\n&lt;disable_distinct&gt;false&lt;\/disable_distinct&gt;\n&lt;limit&gt;-1&lt;\/limit&gt;\n&lt;\/options&gt;\n&lt;selections&gt;\n&lt;selection&gt;\n&lt;view&gt;Patient_Group&lt;\/view&gt;\n&lt;column&gt;LC_BIOME_EHR_age_group_2&lt;\/column&gt;\n&lt;aggregation&gt;NONE&lt;\/aggregation&gt;\n&lt;\/selection&gt;\n&lt;\/selections&gt;\n&lt;constraints\/&gt;\n&lt;orders\/&gt;\n&lt;\/mql&gt;"}}</const><var jsonType="string"/><name jsonType="string">jsMql</name></parameter8><parameter7 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">domainId</name></parameter7><parameter2 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">validx</name></parameter2><parameter1 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">lblidx</name></parameter1><parameter4 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">dataSourceName</name></parameter4><parameter3 jsonType="object"><const jsonType="string">true</const><var jsonType="string"/><name jsonType="string">filterColumns</name></parameter3></parameters><defaultValue isNull="true"/><logColor jsonType="string">rgb(149,127,159)</logColor><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:41.531Z</timerSplit><elapsedSinceSplit jsonType="string">1589</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><url jsonType="string">dashboards</url><executeAtStart jsonType="string">true</executeAtStart><currentVal isNull="true"/><useFirstValue jsonType="string">true</useFirstValue><filterType jsonType="string">mql</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_3</htmlObject><GUID jsonType="string">98819</GUID><valueAsId jsonType="string">false</valueAsId><isMultiple jsonType="string">true</isMultiple><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.944Z</timerStart><type jsonType="string">multiButtonComponent</type><title jsonType="string">Age Prompt</title><parameter jsonType="string">AgePrompt1443095865281</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_3</name><elapsedSinceStart jsonType="string">2392</elapsedSinceStart><parameters jsonType="object"><parameter0 jsonType="object"><const jsonType="string">listmql</const><var jsonType="string"/><name jsonType="string">command</name></parameter0><parameter9 jsonType="object"><const jsonType="string">/public/bioMe/10-Dashboards/HealthOutcomesComparison.xdash</const><var jsonType="string"/><name jsonType="string">xdash</name></parameter9><parameter10 jsonType="object"><const jsonType="string">pov_widget_3</const><var jsonType="string"/><name jsonType="string">component</name></parameter10><parameter6 jsonType="object"><const jsonType="string">MODEL_1</const><var jsonType="string"/><name jsonType="string">modelId</name></parameter6><parameter5 jsonType="object"><const jsonType="string">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;mql&gt;
+&lt;domain_id&gt;BioMe EHR&lt;/domain_id&gt;
+&lt;model_id&gt;MODEL_1&lt;/model_id&gt;
+&lt;options&gt;
+&lt;disable_distinct&gt;false&lt;/disable_distinct&gt;
+&lt;limit&gt;-1&lt;/limit&gt;
+&lt;/options&gt;
+&lt;selections&gt;
+&lt;selection&gt;
+&lt;view&gt;Patient_Group&lt;/view&gt;
+&lt;column&gt;LC_BIOME_EHR_age_group_2&lt;/column&gt;
+&lt;aggregation&gt;NONE&lt;/aggregation&gt;
+&lt;/selection&gt;
+&lt;/selections&gt;
+&lt;constraints/&gt;
+&lt;orders/&gt;
+&lt;/mql&gt;</const><var jsonType="string"/><name jsonType="string">mql</name></parameter5><parameter8 jsonType="object"><const jsonType="string">{"MQLQuery":{"cols":[{"org.pentaho.commons.metadata.mqleditor.beans.Column":{"id":"LC_BIOME_EHR_age_group_2","name":"Age group","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}],"limit":-1,"domain":{"__at_id":"default","__at_name":"BioMe EHR"},"model":{"__at_id":"MODEL_1","__at_name":"BioMe EHR"},"query":"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;mql&gt;\n&lt;domain_id&gt;BioMe EHR&lt;\/domain_id&gt;\n&lt;model_id&gt;MODEL_1&lt;\/model_id&gt;\n&lt;options&gt;\n&lt;disable_distinct&gt;false&lt;\/disable_distinct&gt;\n&lt;limit&gt;-1&lt;\/limit&gt;\n&lt;\/options&gt;\n&lt;selections&gt;\n&lt;selection&gt;\n&lt;view&gt;Patient_Group&lt;\/view&gt;\n&lt;column&gt;LC_BIOME_EHR_age_group_2&lt;\/column&gt;\n&lt;aggregation&gt;NONE&lt;\/aggregation&gt;\n&lt;\/selection&gt;\n&lt;\/selections&gt;\n&lt;constraints\/&gt;\n&lt;orders\/&gt;\n&lt;\/mql&gt;"}}</const><var jsonType="string"/><name jsonType="string">jsMql</name></parameter8><parameter7 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">domainId</name></parameter7><parameter2 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">validx</name></parameter2><parameter1 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">lblidx</name></parameter1><parameter4 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">dataSourceName</name></parameter4><parameter3 jsonType="object"><const jsonType="string">true</const><var jsonType="string"/><name jsonType="string">filterColumns</name></parameter3></parameters><defaultValue jsonType="string">11 to 20</defaultValue><logColor jsonType="string">rgb(148,126,159)</logColor><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:42.336Z</timerSplit><elapsedSinceSplit jsonType="string">2392</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><url jsonType="string">dashboards</url><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">mql</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_5</htmlObject><GUID jsonType="string">53021</GUID><valueAsId jsonType="string">false</valueAsId><isMultiple jsonType="string">true</isMultiple><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.945Z</timerStart><type jsonType="string">selectMultiComponent</type><title jsonType="string">Medical Prompt</title><parameter jsonType="string">Medical Prompt1443171404918</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_5</name><elapsedSinceStart jsonType="string">3134</elapsedSinceStart><parameters jsonType="object"><parameter0 jsonType="object"><const jsonType="string">listmql</const><var jsonType="string"/><name jsonType="string">command</name></parameter0><parameter9 jsonType="object"><const jsonType="string">/public/bioMe/10-Dashboards/HealthOutcomesComparison.xdash</const><var jsonType="string"/><name jsonType="string">xdash</name></parameter9><parameter10 jsonType="object"><const jsonType="string">pov_widget_5</const><var jsonType="string"/><name jsonType="string">component</name></parameter10><parameter6 jsonType="object"><const jsonType="string">MODEL_1</const><var jsonType="string"/><name jsonType="string">modelId</name></parameter6><parameter5 jsonType="object"><const jsonType="string">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;mql&gt;
+&lt;domain_id&gt;BioMe EHR&lt;/domain_id&gt;
+&lt;model_id&gt;MODEL_1&lt;/model_id&gt;
+&lt;options&gt;
+&lt;disable_distinct&gt;false&lt;/disable_distinct&gt;
+&lt;limit&gt;-1&lt;/limit&gt;
+&lt;/options&gt;
+&lt;selections&gt;
+&lt;selection&gt;
+&lt;view&gt;Medical&lt;/view&gt;
+&lt;column&gt;LC_BIOME_EHR_med_cond_2&lt;/column&gt;
+&lt;aggregation&gt;NONE&lt;/aggregation&gt;
+&lt;/selection&gt;
+&lt;/selections&gt;
+&lt;constraints&gt;
+&lt;constraint&gt;
+&lt;operator&gt;AND&lt;/operator&gt;
+&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];"Obesity")&lt;/condition&gt;
+&lt;/constraint&gt;
+&lt;constraint&gt;
+&lt;operator&gt;OR&lt;/operator&gt;
+&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];"Diabetes")&lt;/condition&gt;
+&lt;/constraint&gt;
+&lt;constraint&gt;
+&lt;operator&gt;OR&lt;/operator&gt;
+&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];"null")&lt;/condition&gt;
+&lt;/constraint&gt;
+&lt;constraint&gt;
+&lt;operator&gt;OR&lt;/operator&gt;
+&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];"Hypertension")&lt;/condition&gt;
+&lt;/constraint&gt;
+&lt;constraint&gt;
+&lt;operator&gt;OR&lt;/operator&gt;
+&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];"Heart Disease")&lt;/condition&gt;
+&lt;/constraint&gt;
+&lt;constraint&gt;
+&lt;operator&gt;OR&lt;/operator&gt;
+&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];"None")&lt;/condition&gt;
+&lt;/constraint&gt;
+&lt;/constraints&gt;
+&lt;orders/&gt;
+&lt;/mql&gt;</const><var jsonType="string"/><name jsonType="string">mql</name></parameter5><parameter8 jsonType="object"><const jsonType="string">{"MQLQuery":{"cols":[{"org.pentaho.commons.metadata.mqleditor.beans.Column":{"id":"LC_BIOME_EHR_med_cond_2","name":"Med cond","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}],"conditions":[{"org.pentaho.commons.metadata.mqleditor.beans.Condition":[{"condition":{"__at_combinationType":"AND","__at_defaultValue":"","__at_operator":"exactly matches","__at_selectedAggType":"","__at_value":"Obesity","column":{"id":"LC_BIOME_EHR_med_cond_2","name":"Med cond","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}},{"condition":{"__at_combinationType":"OR","__at_defaultValue":"","__at_operator":"exactly matches","__at_selectedAggType":"","__at_value":"Diabetes","column":{"id":"LC_BIOME_EHR_med_cond_2","name":"Med cond","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}},{"condition":{"__at_combinationType":"OR","__at_defaultValue":"null","__at_operator":"exactly matches","__at_selectedAggType":"","__at_value":"null","column":{"id":"LC_BIOME_EHR_med_cond_2","name":"Med cond","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}},{"condition":{"__at_combinationType":"OR","__at_defaultValue":"","__at_operator":"exactly matches","__at_selectedAggType":"","__at_value":"Hypertension","column":{"id":"LC_BIOME_EHR_med_cond_2","name":"Med cond","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}},{"condition":{"__at_combinationType":"OR","__at_defaultValue":"","__at_operator":"exactly matches","__at_selectedAggType":"","__at_value":"Heart Disease","column":{"id":"LC_BIOME_EHR_med_cond_2","name":"Med cond","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}},{"condition":{"__at_combinationType":"OR","__at_defaultValue":"","__at_operator":"exactly matches","__at_selectedAggType":"","__at_value":"None","column":{"id":"LC_BIOME_EHR_med_cond_2","name":"Med cond","type":"TEXT","aggTypes":[{"org.pentaho.commons.metadata.mqleditor.AggType":["NONE","COUNT","COUNT_DISTINCT"]}],"defaultAggType":"NONE","selectedAggType":"NONE","persistent":false}}}]}],"limit":-1,"domain":{"__at_id":"default","__at_name":"BioMe EHR"},"model":{"__at_id":"MODEL_1","__at_name":"BioMe EHR"},"query":"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;mql&gt;\n&lt;domain_id&gt;BioMe EHR&lt;\/domain_id&gt;\n&lt;model_id&gt;MODEL_1&lt;\/model_id&gt;\n&lt;options&gt;\n&lt;disable_distinct&gt;false&lt;\/disable_distinct&gt;\n&lt;limit&gt;-1&lt;\/limit&gt;\n&lt;\/options&gt;\n&lt;selections&gt;\n&lt;selection&gt;\n&lt;view&gt;Medical&lt;\/view&gt;\n&lt;column&gt;LC_BIOME_EHR_med_cond_2&lt;\/column&gt;\n&lt;aggregation&gt;NONE&lt;\/aggregation&gt;\n&lt;\/selection&gt;\n&lt;\/selections&gt;\n&lt;constraints&gt;\n&lt;constraint&gt;\n&lt;operator&gt;AND&lt;\/operator&gt;\n&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];\"Obesity\")&lt;\/condition&gt;\n&lt;\/constraint&gt;\n&lt;constraint&gt;\n&lt;operator&gt;OR&lt;\/operator&gt;\n&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];\"Diabetes\")&lt;\/condition&gt;\n&lt;\/constraint&gt;\n&lt;constraint&gt;\n&lt;operator&gt;OR&lt;\/operator&gt;\n&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];\"null\")&lt;\/condition&gt;\n&lt;\/constraint&gt;\n&lt;constraint&gt;\n&lt;operator&gt;OR&lt;\/operator&gt;\n&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];\"Hypertension\")&lt;\/condition&gt;\n&lt;\/constraint&gt;\n&lt;constraint&gt;\n&lt;operator&gt;OR&lt;\/operator&gt;\n&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];\"Heart Disease\")&lt;\/condition&gt;\n&lt;\/constraint&gt;\n&lt;constraint&gt;\n&lt;operator&gt;OR&lt;\/operator&gt;\n&lt;condition&gt;EQUALS([Medical.LC_BIOME_EHR_med_cond_2];\"None\")&lt;\/condition&gt;\n&lt;\/constraint&gt;\n&lt;\/constraints&gt;\n&lt;orders\/&gt;\n&lt;\/mql&gt;"}}</const><var jsonType="string"/><name jsonType="string">jsMql</name></parameter8><parameter7 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">domainId</name></parameter7><parameter2 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">validx</name></parameter2><parameter1 jsonType="object"><const jsonType="string">0</const><var jsonType="string"/><name jsonType="string">lblidx</name></parameter1><parameter4 jsonType="object"><const jsonType="string">BioMe EHR</const><var jsonType="string"/><name jsonType="string">dataSourceName</name></parameter4><parameter3 jsonType="object"><const jsonType="string">true</const><var jsonType="string"/><name jsonType="string">filterColumns</name></parameter3></parameters><defaultValue jsonType="string">Obesity</defaultValue><logColor jsonType="string">rgb(148,123,159)</logColor><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:43.079Z</timerSplit><elapsedSinceSplit jsonType="string">3133</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><url jsonType="string">dashboards</url><size jsonType="string">100</size><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">mql</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_5</htmlObject><GUID jsonType="string">53021</GUID><isMultiple jsonType="string">true</isMultiple><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.948Z</timerStart><type jsonType="string">selectMultiComponent</type><title jsonType="string">Medical Prompt</title><parameter jsonType="string">Medical Prompt1443171404918</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_5</name><elapsedSinceStart jsonType="string">3132</elapsedSinceStart><parameters jsonType="object"/><defaultValue jsonType="string">Obesity</defaultValue><logColor jsonType="string">rgb(148,123,159)</logColor><valuesArray jsonType="string" jsonIsArray="true">Obesity</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Obesity</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Hypertension</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Hypertension</valuesArray><valuesArray jsonType="string" jsonIsArray="true">None</valuesArray><valuesArray jsonType="string" jsonIsArray="true">None</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Diabetes</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Diabetes</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Heart Disease</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Heart Disease</valuesArray><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:43.080Z</timerSplit><elapsedSinceSplit jsonType="string">3131</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">static</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_6</htmlObject><GUID jsonType="string">31090</GUID><isMultiple jsonType="string">true</isMultiple><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.950Z</timerStart><type jsonType="string">selectMultiComponent</type><title jsonType="string">Gender Prompt</title><parameter jsonType="string">Gender1443174854848</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_6</name><elapsedSinceStart jsonType="string">3130</elapsedSinceStart><parameters jsonType="object"/><defaultValue jsonType="string">Male</defaultValue><logColor jsonType="string">rgb(147,122,159)</logColor><valuesArray jsonType="string" jsonIsArray="true">Male</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Male</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Female</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Female</valuesArray><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:43.080Z</timerSplit><elapsedSinceSplit jsonType="string">3130</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">static</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_7</htmlObject><GUID jsonType="string">69198</GUID><isMultiple jsonType="string">true</isMultiple><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.953Z</timerStart><type jsonType="string">selectMultiComponent</type><title jsonType="string">Age Prompt</title><parameter jsonType="string">Age1443174907344</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_7</name><elapsedSinceStart jsonType="string">3128</elapsedSinceStart><parameters jsonType="object"/><defaultValue jsonType="string">21 to 30</defaultValue><logColor jsonType="string">rgb(147,121,159)</logColor><valuesArray jsonType="string" jsonIsArray="true">11 to 20</valuesArray><valuesArray jsonType="string" jsonIsArray="true">11 to 20</valuesArray><valuesArray jsonType="string" jsonIsArray="true">21 to 30</valuesArray><valuesArray jsonType="string" jsonIsArray="true">21 to 30</valuesArray><valuesArray jsonType="string" jsonIsArray="true">31 to 40</valuesArray><valuesArray jsonType="string" jsonIsArray="true">31 to 40</valuesArray><valuesArray jsonType="string" jsonIsArray="true">41 to 50</valuesArray><valuesArray jsonType="string" jsonIsArray="true">41 to 50</valuesArray><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:43.081Z</timerSplit><elapsedSinceSplit jsonType="string">3128</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">static</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_8</htmlObject><GUID jsonType="string">13815</GUID><isMultiple jsonType="string">true</isMultiple><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.954Z</timerStart><type jsonType="string">selectMultiComponent</type><title jsonType="string">Age Prompt</title><parameter jsonType="string">Age1443178709315</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_8</name><elapsedSinceStart jsonType="string">3127</elapsedSinceStart><parameters jsonType="object"/><defaultValue jsonType="string">11 to 20</defaultValue><logColor jsonType="string">rgb(147,120,159)</logColor><valuesArray jsonType="string" jsonIsArray="true">11 to 20</valuesArray><valuesArray jsonType="string" jsonIsArray="true">11 to 20</valuesArray><valuesArray jsonType="string" jsonIsArray="true">21 to 30</valuesArray><valuesArray jsonType="string" jsonIsArray="true">21 to 30</valuesArray><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:43.081Z</timerSplit><elapsedSinceSplit jsonType="string">3127</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">static</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_8</htmlObject><GUID jsonType="string">13815</GUID><isMultiple jsonType="string">true</isMultiple><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><initInstance jsonType="string">0</initInstance><timerStart jsonType="string">2015-09-28T18:23:39.955Z</timerStart><type jsonType="string">selectMultiComponent</type><title jsonType="string">Age Prompt</title><parameter jsonType="string">Age1443178709315</parameter><runCounter jsonType="string">0</runCounter><name jsonType="string">pov_widget_8</name><elapsedSinceStart jsonType="string">3126</elapsedSinceStart><parameters jsonType="object"/><defaultValue jsonType="string">0 to 10|11 to 20|21 to 30|31 to 40|41 to 50|51 to 60|61 to 70|71 to 80|81 to 90</defaultValue><logColor jsonType="string">rgb(147,120,159)</logColor><valuesArray jsonType="string" jsonIsArray="true">0 to 10</valuesArray><valuesArray jsonType="string" jsonIsArray="true">0 to 10</valuesArray><valuesArray jsonType="string" jsonIsArray="true">11 to 20</valuesArray><valuesArray jsonType="string" jsonIsArray="true">11 to 20</valuesArray><valuesArray jsonType="string" jsonIsArray="true">21 to 30</valuesArray><valuesArray jsonType="string" jsonIsArray="true">21 to 30</valuesArray><valuesArray jsonType="string" jsonIsArray="true">31 to 40</valuesArray><valuesArray jsonType="string" jsonIsArray="true">31 to 40</valuesArray><valuesArray jsonType="string" jsonIsArray="true">41 to 50</valuesArray><valuesArray jsonType="string" jsonIsArray="true">41 to 50</valuesArray><valuesArray jsonType="string" jsonIsArray="true">51 to 60</valuesArray><valuesArray jsonType="string" jsonIsArray="true">51 to 60</valuesArray><valuesArray jsonType="string" jsonIsArray="true">61 to 70</valuesArray><valuesArray jsonType="string" jsonIsArray="true">61 to 70</valuesArray><isRunning jsonType="string">false</isRunning><timerSplit jsonType="string">2015-09-28T18:23:43.081Z</timerSplit><elapsedSinceSplit jsonType="string">3126</elapsedSinceSplit><defaultIfEmpty jsonType="string">true</defaultIfEmpty><refreshPeriod jsonType="string">0</refreshPeriod><executeAtStart jsonType="string">true</executeAtStart><useFirstValue jsonType="string">false</useFirstValue><filterType jsonType="string">static</filterType><separator isNull="true"/></widget><widget jsonType="object"><htmlObject jsonType="string">widgetContainer-content-pov_widget_9</htmlObject><GUID jsonType="string">53658</GUID><isMultiple jsonType="string">true</isMultiple><valueAsId jsonType="string">false</valueAsId><verticalOrientation jsonType="string">true</verticalOrientation><originalName isNull="true"/><type jsonType="string">selectMultiComponent</type><defaultIfEmpty jsonType="string">true</defaultIfEmpty><title jsonType="string">Medical Prompt</title><parameter jsonType="string">Medical Prompt1443191356638</parameter><executeAtStart jsonType="string">true</executeAtStart><name jsonType="string">pov_widget_9</name><useFirstValue jsonType="string">false</useFirstValue><parameters jsonType="object"/><defaultValue jsonType="string">Heart Disease</defaultValue><filterType jsonType="string">static</filterType><separator isNull="true"/><valuesArray jsonType="string" jsonIsArray="true">Diabetes</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Diabetes</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Heart Disease</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Heart Disease</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Hypertension</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Hypertension</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Obesity</valuesArray><valuesArray jsonType="string" jsonIsArray="true">Obesity</valuesArray><valuesArray jsonType="string" jsonIsArray="true">None</valuesArray><valuesArray jsonType="string" jsonIsArray="true">None</valuesArray></widget></widgets></dashboard>

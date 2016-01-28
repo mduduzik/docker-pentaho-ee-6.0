@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories>
+  <repository>    <id>PentahoEnterpriseRepository</id>
+    <name>PDI_SERVER_HOST_PDI_SERVER_PORT</name>
+    <description>PDI_SERVER_HOST_PDI_SERVER_PORT</description>
+    <repository_location_url>http&#x3a;&#x2f;&#x2f;PDI_SERVER_HOST&#x3a;PDI_SERVER_PORT&#x2f;pentaho-di</repository_location_url>
+    <version_comment_mandatory>N</version_comment_mandatory>
+  </repository>  </repositories>

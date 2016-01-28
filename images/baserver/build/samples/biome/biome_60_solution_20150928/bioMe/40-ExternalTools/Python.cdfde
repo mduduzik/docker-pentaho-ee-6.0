@@ -1,0 +1,775 @@
+{
+ "components": {
+  "rows": []
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SCRIPTING",
+    "name": "SCRIPTING Queries",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "type": "Label",
+      "value": "SCRIPTING Queries"
+     }
+    ],
+    "type": "Label",
+    "typeDesc": "<i>Group</i>"
+   },
+   {
+    "id": "934edd35-b34c-0f83-ad9e-d2286cf37c3b",
+    "meta": "CDA",
+    "meta_conntype": "scripting.scripting",
+    "meta_datype": "scriptable",
+    "parent": "SCRIPTING",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "heatChartQuery_new"
+     },
+     {
+      "name": "initscript",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "language",
+      "type": "String",
+      "value": "beanshell"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "query",
+      "type": "ScriptableQuery",
+      "value": "import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;\r\n\r\nString[] columnNames = new String[]{\r\n\"SERIES\", \"CATEGORY\",\"COST\", \"COST2\", \"COST3\", \"COST4\", \"COST5\", \"COST6\", \"COST7\"\r\n};\r\n\r\n\r\nClass[] columnTypes = new Class[]{\r\nString.class,\r\nString.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class\r\n};\r\n\r\nTypedTableModel model = new TypedTableModel(columnNames, columnTypes);\r\n\r\nmodel.addRow(new Object[]{new String(\"RoW\"),new String(\"Product A\"), new Integer(\"110\"), new Integer(\"410\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"RoW\"),new String(\"Product B\"), new Integer(\"2500\"), new Integer(\"18\"),new Integer(\"410\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"1450\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"RoW\"),new String(\"Product C\"), new Integer(\"17\"), new Integer(\"1450\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"1450\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"RoW\"),new String(\"Product D\"), new Integer(\"1450\"), new Integer(\"18\"),new Integer(\"410\"),new Integer(\"18\"),new Integer(\"17\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"RoW\"),new String(\"Product E\"), new Integer(\"2100\"), new Integer(\"18\"),new Integer(\"18\"),new Integer(\"410\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"RoW\"),new String(\"Product F\"), new Integer(\"800\"), new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"RoW\"),new String(\"Product G\"), new Integer(\"410\"), new Integer(\"17\"),new Integer(\"1450\"),new Integer(\"410\"),new Integer(\"17\"),new Integer(\"1450\"),new Integer(\"18\")});\r\n\r\n\r\n\r\n\r\nreturn model;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "type": "Componentsscriptable_scripting",
+    "typeDesc": "scriptable over scripting"
+   },
+   {
+    "id": "a373d635-b5bd-0024-1978-c19a532d4099",
+    "meta": "CDA",
+    "meta_conntype": "scripting.scripting",
+    "meta_datype": "scriptable",
+    "parent": "SCRIPTING",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "heatChartQuery"
+     },
+     {
+      "name": "initscript",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "language",
+      "type": "String",
+      "value": "beanshell"
+     },
+     {
+      "name": "access",
+      "type": "Access",
+      "value": "public"
+     },
+     {
+      "name": "query",
+      "type": "ScriptableQuery",
+      "value": "import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;\r\n\r\nString[] columnNames = new String[]{\r\n \"CATEGORY\",\"10-20\", \"20-30\", \"30-40\", \"40-50\", \"50-60\"\r\n};\r\n\r\n\r\nClass[] columnTypes = new Class[]{\r\nString.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class,\r\nInteger.class,\r\n\r\n};\r\n\r\nTypedTableModel model = new TypedTableModel(columnNames, columnTypes);\r\n\r\nmodel.addRow(new Object[]{new String(\"Product A\"), new Integer(\"110\"), new Integer(\"410\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"Product B\"), new Integer(\"2500\"), new Integer(\"18\"),new Integer(\"410\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"Product C\"), new Integer(\"17\"), new Integer(\"1450\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"1450\")});\r\nmodel.addRow(new Object[]{new String(\"Product D\"), new Integer(\"1450\"), new Integer(\"18\"),new Integer(\"410\"),new Integer(\"18\"),new Integer(\"17\")});\r\nmodel.addRow(new Object[]{new String(\"Product E\"), new Integer(\"2100\"), new Integer(\"18\"),new Integer(\"18\"),new Integer(\"410\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"Product F\"), new Integer(\"800\"), new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\"),new Integer(\"18\")});\r\nmodel.addRow(new Object[]{new String(\"Product G\"), new Integer(\"410\"), new Integer(\"17\"),new Integer(\"1450\"),new Integer(\"410\"),new Integer(\"17\")});\r\n\r\n\r\n\r\n\r\nreturn model;"
+     },
+     {
+      "name": "parameters",
+      "type": "CdaParameters",
+      "value": "[]"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "type": "CdaCalculatedColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "cdacolumns",
+      "type": "CdaColumnsArray",
+      "value": "[]"
+     },
+     {
+      "name": "output",
+      "type": "IndexArray",
+      "value": "[]"
+     },
+     {
+      "name": "outputMode",
+      "type": "OutputMode",
+      "value": "include"
+     },
+     {
+      "name": "cacheKeys",
+      "type": "CacheKeysValues",
+      "value": "[]"
+     },
+     {
+      "name": "cacheDuration",
+      "type": "Integer",
+      "value": 3600
+     },
+     {
+      "name": "cache",
+      "type": "Boolean",
+      "value": "true"
+     }
+    ],
+    "type": "Componentsscriptable_scripting",
+    "typeDesc": "scriptable over scripting"
+   }
+  ]
+ },
+ "filename": "/public/bioMe/40-ExternalTools/Python.cdfde",
+ "layout": {
+  "rows": [
+   {
+    "id": "b48674b0-754a-c1e6-5518-55a8d599b54e",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "predictive.css"
+     },
+     {
+      "name": "resourceFile",
+      "type": "ResourceFile",
+      "value": "${solution:resources/predictive.css}"
+     },
+     {
+      "name": "resourceType",
+      "type": "Label",
+      "value": "Css"
+     }
+    ],
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource"
+   },
+   {
+    "id": "025f3a41-ce95-920c-41fd-b0e46c1f1ffc",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "mainRow"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "mainRow"
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "23fdd35d-49dc-1eae-d716-77e41724ea74",
+    "parent": "025f3a41-ce95-920c-41fd-b0e46c1f1ffc",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "mainCol"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "0b907f90-330e-e71c-0413-31bf9b3122bd",
+    "parent": "23fdd35d-49dc-1eae-d716-77e41724ea74",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "mainAreaRow"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "mainAreaRow"
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "786987ec-1088-6fd5-5012-728049076a82",
+    "parent": "0b907f90-330e-e71c-0413-31bf9b3122bd",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "textButtonColumn"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "5"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "textButton"
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "932b1782-ce59-06b5-988b-8f92c6b37a69",
+    "parent": "786987ec-1088-6fd5-5012-728049076a82",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "titleRow"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "title"
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "512a9b3c-321c-5abd-b8ff-5088fd552ead",
+    "parent": "932b1782-ce59-06b5-988b-8f92c6b37a69",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "titleObj"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "6d0c41c9-585e-be7d-2005-548e31d331ed",
+    "parent": "512a9b3c-321c-5abd-b8ff-5088fd552ead",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "Python "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "6f97821e-3b97-08ae-5f29-1c01689ca2bc",
+    "parent": "786987ec-1088-6fd5-5012-728049076a82",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "textRow"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "text"
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   },
+   {
+    "id": "4a1e1b30-e304-ab32-79f0-3439280afeaa",
+    "parent": "6f97821e-3b97-08ae-5f29-1c01689ca2bc",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "textObj"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "6f78f7d7-670c-d357-b5bb-727ed8239089",
+    "parent": "4a1e1b30-e304-ab32-79f0-3439280afeaa",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "Python is a widely known language for data analysis, this sample analysis on the BMI’s distribution for the complete population was done using the Mathplot module. The connection to the Pentaho Data Services is done using the JayDeBeAPI module. "
+     },
+     {
+      "name": "fontSize",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "color",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     }
+    ],
+    "type": "LayoutHtml",
+    "typeDesc": "Html"
+   },
+   {
+    "id": "ed91c374-f533-83af-b2a7-91fcd36e156d",
+    "parent": "0b907f90-330e-e71c-0413-31bf9b3122bd",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "imageObj"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "type": "String",
+      "value": "12"
+     },
+     {
+      "name": "bootstrapSmall",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapMedium",
+      "type": "String",
+      "value": "7"
+     },
+     {
+      "name": "bootstrapLarge",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "bootstrapCssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "imageP"
+     }
+    ],
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column"
+   },
+   {
+    "id": "400b979b-9838-e1c5-0a86-67b1f6f3aaf0",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "footerRow"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "pentahoLogo"
+     }
+    ],
+    "type": "LayoutRow",
+    "typeDesc": "Row"
+   }
+  ],
+  "title": "CDF - Sample structure"
+ }
+}

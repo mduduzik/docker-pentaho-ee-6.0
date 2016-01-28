@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="heatChartQuery" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+      <Connection id="dummyAge" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+      <Connection id="ageQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="genderQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="medicalQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="bmiGridQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="ldlGridQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="hdlGridQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="heatChartQuery" id="heatChartQuery"
+               type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+ "Serie","Cat", "Value"
+};
+
+
+Class[] columnTypes = new Class[]{
+String.class,
+String.class,
+Integer.class
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{new String("10-20"), new String("0-10"),  new Integer("110")}); 
+model.addRow(new Object[]{new String("20-30"), new String("0-10"),  new Integer("410")});
+model.addRow(new Object[]{new String("30-40"), new String("0-10"),  new Integer("4000")}); 
+model.addRow(new Object[]{new String("40-50"), new String("0-10"),  new Integer("18")}); 
+model.addRow(new Object[]{new String("50-60"), new String("0-10"),  new Integer("18")}); 
+
+model.addRow(new Object[]{new String("10-20"), new String("10-20"), new Integer("2500")}); 
+model.addRow(new Object[]{new String("20-30"), new String("10-20"), new Integer("18")});
+model.addRow(new Object[]{new String("30-40"), new String("10-20"), new Integer("410")}); 
+model.addRow(new Object[]{new String("40-50"), new String("10-20"), new Integer("18")}); 
+model.addRow(new Object[]{new String("50-60"), new String("10-20"), new Integer("18")});  
+
+model.addRow(new Object[]{new String("10-20"), new String("20-30"), new Integer("17")}); 
+model.addRow(new Object[]{new String("20-30"), new String("20-30"), new Integer("1450")});
+model.addRow(new Object[]{new String("30-40"), new String("20-30"), new Integer("18")}); 
+model.addRow(new Object[]{new String("40-50"), new String("20-30"), new Integer("18")}); 
+model.addRow(new Object[]{new String("50-60"), new String("20-30"), new Integer("1450")});
+
+model.addRow(new Object[]{new String("10-20"), new String("30-40"), new Integer("1450")}); 
+model.addRow(new Object[]{new String("20-30"), new String("30-40"), new Integer("18")});
+model.addRow(new Object[]{new String("30-40"), new String("30-40"), new Integer("410")}); 
+model.addRow(new Object[]{new String("40-50"), new String("30-40"), new Integer("18")}); 
+model.addRow(new Object[]{new String("50-60"), new String("30-40"), new Integer("17")});
+
+model.addRow(new Object[]{new String("10-20"), new String("40-50"), new Integer("2100")}); 
+model.addRow(new Object[]{new String("20-30"), new String("40-50"), new Integer("4500")});
+model.addRow(new Object[]{new String("30-40"), new String("40-50"), new Integer("18")}); 
+model.addRow(new Object[]{new String("40-50"), new String("40-50"), new Integer("410")}); 
+model.addRow(new Object[]{new String("50-60"), new String("40-50"), new Integer("19")});
+
+model.addRow(new Object[]{new String("10-20"), new String("50-60"), new Integer("1850")}); 
+model.addRow(new Object[]{new String("20-30"), new String("50-60"), new Integer("18")});
+model.addRow(new Object[]{new String("30-40"), new String("50-60"), new Integer("4500")}); 
+model.addRow(new Object[]{new String("40-50"), new String("50-60"), new Integer("410")}); 
+model.addRow(new Object[]{new String("50-60"), new String("50-60"), new Integer("19")});
+
+model.addRow(new Object[]{new String("10-20"), new String("60-70"), new Integer("800")}); 
+model.addRow(new Object[]{new String("20-30"), new String("60-70"), new Integer("18")});
+model.addRow(new Object[]{new String("30-40"), new String("60-70"), new Integer("19")}); 
+model.addRow(new Object[]{new String("40-50"), new String("60-70"), new Integer("18")}); 
+model.addRow(new Object[]{new String("50-60"), new String("60-70"), new Integer("23")});
+
+model.addRow(new Object[]{new String("10-20"), new String("60-70"), new Integer("800")}); 
+model.addRow(new Object[]{new String("20-30"), new String("60-70"), new Integer("18")});
+model.addRow(new Object[]{new String("30-40"), new String("60-70"), new Integer("19")}); 
+model.addRow(new Object[]{new String("40-50"), new String("60-70"), new Integer("18")}); 
+model.addRow(new Object[]{new String("50-60"), new String("60-70"), new Integer("23")});
+
+model.addRow(new Object[]{new String("10-20"), new String("70-80"), new Integer("410")}); 
+model.addRow(new Object[]{new String("20-30"), new String("70-80"), new Integer("18")});
+model.addRow(new Object[]{new String("30-40"), new String("70-80"), new Integer("1450")}); 
+model.addRow(new Object[]{new String("40-50"), new String("70-80"), new Integer("410")}); 
+model.addRow(new Object[]{new String("50-60"), new String("70-80"), new Integer("23")});
+
+model.addRow(new Object[]{new String("10-20"), new String("80-90"), new Integer("800")}); 
+model.addRow(new Object[]{new String("20-30"), new String("80-90"), new Integer("18")});
+model.addRow(new Object[]{new String("30-40"), new String("80-90"), new Integer("19")}); 
+model.addRow(new Object[]{new String("40-50"), new String("80-90"), new Integer("5000")}); 
+model.addRow(new Object[]{new String("50-60"), new String("80-90"), new Integer("23")});
+
+model.addRow(new Object[]{new String("10-20"), new String("90-100"), new Integer("410")}); 
+model.addRow(new Object[]{new String("20-30"), new String("90-100"), new Integer("17")});
+model.addRow(new Object[]{new String("30-40"), new String("90-100"), new Integer("1450")}); 
+model.addRow(new Object[]{new String("40-50"), new String("90-100"), new Integer("410")}); 
+model.addRow(new Object[]{new String("50-60"), new String("90-100"), new Integer("15")});
+
+return model;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dummyAge" id="dummyAge" type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+"value","name2"
+};
+
+
+Class[] columnTypes = new Class[]{
+Integer.class,
+String.class
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{ new Integer("0"), new String("0 - 18") });
+model.addRow(new Object[]{ new Integer("1"), new String("19 - 25") });
+model.addRow(new Object[]{ new Integer("2"), new String("26 - 35") });
+model.addRow(new Object[]{ new Integer("3"), new String("36 - 45") });
+model.addRow(new Object[]{ new Integer("4"), new String("46 - 65") });
+
+return model;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ageQuery" id="ageQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select age_group from BIOME_EHR
+where age_group <> 'undefined' and age_group <> ''
+group by age_group
+order by  age_group]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="genderQuery" id="genderQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select gender from BIOME_EHR
+where gender <> ''
+group by gender
+order by  gender]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="medicalQuery" id="medicalQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select med_cond from BIOME_EHR
+where med_cond  <> ''
+group by med_cond
+order by  med_cond]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="bmiGridQuery" id="bmiGridQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="None" name="ageParam" type="StringArray"/>
+         <Parameter default="None" name="genderParam" type="StringArray"/>
+         <Parameter default="None" name="medicalParam" type="StringArray"/>
+      </Parameters>
+      <Query><![CDATA[select bmi_categ, uptime_hours_categ, count(anonymized_id) from BIOME_EHR
+where ( has_device = 'Y' and uptime_hours is not null and age_group in (${ageParam}) and gender in (${genderParam}) and med_cond in (${medicalParam}) )
+group by bmi_categ, uptime_hours_categ
+order by bmi_categ, uptime_hours_categ]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ldlGridQuery" id="ldlGridQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="None" name="ageParam" type="StringArray"/>
+         <Parameter default="None" name="genderParam" type="StringArray"/>
+         <Parameter default="None" name="medicalParam" type="StringArray"/>
+      </Parameters>
+      <Query><![CDATA[select ldl_mg_dl, uptime_hours_categ, count(anonymized_id) from BIOME_EHR
+where ( has_device = 'Y' and uptime_hours is not null and age_group in (${ageParam}) and gender in (${genderParam}) and med_cond in (${medicalParam}) )
+group by ldl_mg_dl, uptime_hours_categ
+order by ldl_mg_dl, uptime_hours_categ]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="hdlGridQuery" id="hdlGridQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="None" name="ageParam" type="StringArray"/>
+         <Parameter default="None" name="genderParam" type="StringArray"/>
+         <Parameter default="None" name="medicalParam" type="StringArray"/>
+      </Parameters>
+      <Query><![CDATA[select hdl_mg_dl, uptime_hours_categ, count(anonymized_id) from BIOME_EHR
+where ( has_device = 'Y' and uptime_hours is not null and age_group in (${ageParam}) and gender in (${genderParam}) and med_cond in (${medicalParam}) )
+group by hdl_mg_dl, uptime_hours_categ
+order by hdl_mg_dl, uptime_hours_categ]]></Query>
+   </DataAccess>
+</CDADescriptor>

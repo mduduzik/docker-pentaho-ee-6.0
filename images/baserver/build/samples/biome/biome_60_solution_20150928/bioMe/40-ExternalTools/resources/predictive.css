@@ -1,0 +1,107 @@
+/******************************************************
+    External Tools  CSS
+******************************************************/
+
+
+@font-face { 
+    font-family: 'OpenSans-Regular'; 
+    src: url('../fonts/OpenSans-Regular.eot'); 
+    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/OpenSans-Regular.woff') format('woff'), 
+         url('../fonts/OpenSans-Regular.ttf') format('truetype') 
+}
+
+.mainRow
+{
+    padding-top: 30px;
+    font-size:20px;
+    font-family:"OpenSans-Regular";
+}
+
+.mainAreaRow{
+    background-color: #f9f9f9;
+    padding: 75px 30px 75px;
+    min-width: 778px;
+}
+
+
+.title{
+    font-size: 30px;
+    color: #555555;
+    font-family:"OpenSans-Regular";
+    margin-bottom: 20px;
+}
+
+.textButton{
+    margin-right: 40px;
+}
+
+/*********** Button ***********/
+
+.button{
+    position: relative;
+    top: 20px;
+}
+
+.button .buttonComponent{
+    background: #3597DB;
+    color: white;
+    border-radius: 15px;
+    width: 150px;
+    line-height: 25px;
+}
+
+.button .buttonComponent:focus{
+    outline:none;
+}
+
+.button .btn-default,
+.button .btn-default:hover{
+    border:none;
+}
+
+.text{
+    font-size: 16px;
+    color: #555555;
+    font-family:"OpenSans-light";
+    padding-bottom: 20px;
+}
+
+/*********** Image ***********/
+
+.imageP{
+    background: url("../images/python.png");
+    height: 400px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.imageR{
+    background: url("../images/r_studio.png");
+    height: 400px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #f9f9f9;
+}
+
+.imageJ{
+    background: url("../images/generic.png");
+    height: 400px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.pentahoLogo {
+    background: url('../images/pentaho.png') 99%  white;
+    background-repeat: no-repeat;
+    background-size: 215px 68px;
+    height: 50px;
+    margin-top: 43px;
+}
+
+body .button{
+    font-size:12px;
+}

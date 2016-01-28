@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="heatChartQuery_new" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+      <Connection id="heatChartQuery" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="heatChartQuery_new" id="heatChartQuery_new"
+               type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+"SERIES", "CATEGORY","COST", "COST2", "COST3", "COST4", "COST5", "COST6", "COST7"
+};
+
+
+Class[] columnTypes = new Class[]{
+String.class,
+String.class,
+Integer.class,
+Integer.class,
+Integer.class,
+Integer.class,
+Integer.class,
+Integer.class,
+Integer.class
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{new String("RoW"),new String("Product A"), new Integer("110"), new Integer("410"),new Integer("18"),new Integer("18"),new Integer("18"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("RoW"),new String("Product B"), new Integer("2500"), new Integer("18"),new Integer("410"),new Integer("18"),new Integer("18"),new Integer("1450"),new Integer("18")});
+model.addRow(new Object[]{new String("RoW"),new String("Product C"), new Integer("17"), new Integer("1450"),new Integer("18"),new Integer("18"),new Integer("1450"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("RoW"),new String("Product D"), new Integer("1450"), new Integer("18"),new Integer("410"),new Integer("18"),new Integer("17"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("RoW"),new String("Product E"), new Integer("2100"), new Integer("18"),new Integer("18"),new Integer("410"),new Integer("18"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("RoW"),new String("Product F"), new Integer("800"), new Integer("18"),new Integer("18"),new Integer("18"),new Integer("18"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("RoW"),new String("Product G"), new Integer("410"), new Integer("17"),new Integer("1450"),new Integer("410"),new Integer("17"),new Integer("1450"),new Integer("18")});
+
+
+
+
+return model;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="heatChartQuery" id="heatChartQuery"
+               type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+ "CATEGORY","10-20", "20-30", "30-40", "40-50", "50-60"
+};
+
+
+Class[] columnTypes = new Class[]{
+String.class,
+Integer.class,
+Integer.class,
+Integer.class,
+Integer.class,
+Integer.class,
+
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{new String("Product A"), new Integer("110"), new Integer("410"),new Integer("18"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("Product B"), new Integer("2500"), new Integer("18"),new Integer("410"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("Product C"), new Integer("17"), new Integer("1450"),new Integer("18"),new Integer("18"),new Integer("1450")});
+model.addRow(new Object[]{new String("Product D"), new Integer("1450"), new Integer("18"),new Integer("410"),new Integer("18"),new Integer("17")});
+model.addRow(new Object[]{new String("Product E"), new Integer("2100"), new Integer("18"),new Integer("18"),new Integer("410"),new Integer("18")});
+model.addRow(new Object[]{new String("Product F"), new Integer("800"), new Integer("18"),new Integer("18"),new Integer("18"),new Integer("18")});
+model.addRow(new Object[]{new String("Product G"), new Integer("410"), new Integer("17"),new Integer("1450"),new Integer("410"),new Integer("17")});
+
+
+
+
+return model;]]></Query>
+   </DataAccess>
+</CDADescriptor>

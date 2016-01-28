@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="lineChartQuery" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+      <Connection id="lineChartQuery_1" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+      <Connection id="lineChartQuery_2" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+      <Connection id="dummyAge" type="scripting.scripting">
+         <Initscript/>
+         <Language>beanshell</Language>
+      </Connection>
+      <Connection id="ageQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="genderQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="medicalQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="hrChartQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+      <Connection id="bmiChartQuery" type="sql.jndi">
+         <Jndi>DS_BioMe_EHR</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="lineChartQuery" id="lineChartQuery"
+               type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+"Use",
+"BPM"
+};
+
+
+Class[] columnTypes = new Class[]{
+Integer.class,
+Integer.class
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{ new Integer("-6"), new Integer("60") });
+model.addRow(new Object[]{ new Integer("-5"), new Integer("65") });
+model.addRow(new Object[]{ new Integer("-4"), new Integer("62") });
+model.addRow(new Object[]{ new Integer("-3"), new Integer("63") });
+model.addRow(new Object[]{ new Integer("-2"), new Integer("62") });
+model.addRow(new Object[]{ new Integer("-1"), new Integer("66") });
+model.addRow(new Object[]{ new Integer("0"), new Integer("66") });
+model.addRow(new Object[]{ new Integer("+1"), new Integer("57") });
+model.addRow(new Object[]{ new Integer("+2"), new Integer("58") });
+model.addRow(new Object[]{ new Integer("+3"), new Integer("54") });
+model.addRow(new Object[]{ new Integer("+4"), new Integer("56") });
+model.addRow(new Object[]{ new Integer("+5"), new Integer("46") });
+model.addRow(new Object[]{ new Integer("+6"), new Integer("50") });
+
+
+return model;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="lineChartQuery_1" id="lineChartQuery_1"
+               type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+"Use",
+"BPM"
+};
+
+
+Class[] columnTypes = new Class[]{
+Integer.class,
+Integer.class
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{ new Integer("-6"), new Integer("99") });
+model.addRow(new Object[]{ new Integer("-5"), new Integer("92") });
+model.addRow(new Object[]{ new Integer("-4"), new Integer("100") });
+model.addRow(new Object[]{ new Integer("-3"), new Integer("101") });
+model.addRow(new Object[]{ new Integer("-2"), new Integer("90") });
+model.addRow(new Object[]{ new Integer("-1"), new Integer("78") });
+model.addRow(new Object[]{ new Integer("0"), new Integer("85") });
+model.addRow(new Object[]{ new Integer("+1"), new Integer("81") });
+model.addRow(new Object[]{ new Integer("+2"), new Integer("83") });
+model.addRow(new Object[]{ new Integer("+3"), new Integer("82") });
+model.addRow(new Object[]{ new Integer("+4"), new Integer("84") });
+model.addRow(new Object[]{ new Integer("+5"), new Integer("85") });
+model.addRow(new Object[]{ new Integer("+6"), new Integer("86") });
+
+
+return model;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="lineChartQuery_2" id="lineChartQuery_2"
+               type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+"Use",
+"BPM"
+};
+
+
+Class[] columnTypes = new Class[]{
+Integer.class,
+Integer.class
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{ new Integer("-6"), new Integer("450") });
+model.addRow(new Object[]{ new Integer("-5"), new Integer("550") });
+model.addRow(new Object[]{ new Integer("-4"), new Integer("600") });
+model.addRow(new Object[]{ new Integer("-3"), new Integer("700") });
+model.addRow(new Object[]{ new Integer("-2"), new Integer("680") });
+model.addRow(new Object[]{ new Integer("-1"), new Integer("800") });
+model.addRow(new Object[]{ new Integer("0"), new Integer("900") });
+model.addRow(new Object[]{ new Integer("+1"), new Integer("850") });
+model.addRow(new Object[]{ new Integer("+2"), new Integer("910") });
+model.addRow(new Object[]{ new Integer("+3"), new Integer("910") });
+model.addRow(new Object[]{ new Integer("+4"), new Integer("950") });
+model.addRow(new Object[]{ new Integer("+5"), new Integer("905") });
+model.addRow(new Object[]{ new Integer("+6"), new Integer("950") });
+
+
+return model;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="dummyAge" id="dummyAge" type="scriptable">
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[import org.pentaho.reporting.engine.classic.core.util.TypedTableModel;
+
+String[] columnNames = new String[]{
+"value","name2"
+};
+
+
+Class[] columnTypes = new Class[]{
+Integer.class,
+String.class
+};
+
+TypedTableModel model = new TypedTableModel(columnNames, columnTypes);
+
+model.addRow(new Object[]{ new Integer("0"), new String("0 - 18") });
+model.addRow(new Object[]{ new Integer("1"), new String("19 - 25") });
+model.addRow(new Object[]{ new Integer("2"), new String("26 - 35") });
+model.addRow(new Object[]{ new Integer("3"), new String("36 - 45") });
+model.addRow(new Object[]{ new Integer("4"), new String("46 - 65") });
+
+return model;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ageQuery" id="ageQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select age_group from BIOME_EHR
+where age_group <> 'undefined' and age_group <> ''
+group by age_group
+order by  age_group]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="genderQuery" id="genderQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select gender from BIOME_EHR
+where gender <> ''
+group by gender
+order by  gender]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="medicalQuery" id="medicalQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[select med_cond from BIOME_EHR
+where med_cond  <> ''
+group by med_cond
+order by  med_cond]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="hrChartQuery" id="hrChartQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="None" name="ageParam" type="StringArray"/>
+         <Parameter default="None" name="genderParam" type="StringArray"/>
+         <Parameter default="None" name="medicalParam" type="StringArray"/>
+      </Parameters>
+      <Query><![CDATA[SELECT months_since_device_activation, avg(hr_bpm_rest) as "Heart Rate" FROM BIOME_EHR
+where has_device='Y'
+and months_since_device_activation <= 4 
+and age_group in (${ageParam}) 
+and gender in (${genderParam}) 
+and med_cond in (${medicalParam}) 
+group by months_since_device_activation
+order by months_since_device_activation]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="bmiChartQuery" id="bmiChartQuery" type="sql">
+      <Cache duration="3600000" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="None" name="ageParam" type="StringArray"/>
+         <Parameter default="None" name="genderParam" type="StringArray"/>
+         <Parameter default="None" name="medicalParam" type="StringArray"/>
+      </Parameters>
+      <Query><![CDATA[SELECT months_since_device_activation, avg(bmi_value) as "BMI" FROM BIOME_EHR
+where has_device='Y'
+and months_since_device_activation <= 4 
+and age_group in (${ageParam}) 
+and gender in (${genderParam}) 
+and med_cond in (${medicalParam}) 
+group by months_since_device_activation
+order by months_since_device_activation]]></Query>
+   </DataAccess>
+</CDADescriptor>

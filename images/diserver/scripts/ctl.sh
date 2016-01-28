@@ -10,8 +10,9 @@ ERROR=0
 
 start_tomcat() {
     export DI_HOME="$PENTAHO_HOME/server/data-integration-server/pentaho-solutions/system/kettle"
+    export KETTLE_HOME="$PENTAHO_HOME"
 
-    export JAVA_OPTS="-Dpentaho.installed.licenses.file=$PENTAHO_INSTALLED_LICENSE_PATH -DDI_HOME=$DI_HOME -Xms1024m -Xmx2048m -XX:MaxPermSize=256m -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djava.awt.headless=true"
+    export JAVA_OPTS="-Dpentaho.installed.licenses.file=$PENTAHO_INSTALLED_LICENSE_PATH -DKETTLE_HOME=$KETTLE_HOME -DDI_HOME=$DI_HOME -Xms1024m -Xmx2048m -XX:MaxPermSize=256m -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djava.awt.headless=true"
 
     if [ "${TOMCAT_DEBUG}" = "true" ]; then
         echo

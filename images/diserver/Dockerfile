@@ -5,12 +5,14 @@ MAINTAINER mduduzi.keswa@gmail.com
 # Set up environment
 ENV PENTAHO_HOME=/opt2/pentaho
 ENV CATALINA_HOME=/usr/local/tomcat
-ENV PENTAHO_VERSION=6.0.0.0-353
+ENV PENTAHO_VERSION=6.0.1.0-386
 
 
 # Components to be installed
-ENV COMPONENTS=pdi-manual-ee
+ENV COMPONENTS=pdi-manual-ee:pdi-ee-client
 ENV COMPONENTS_DIR=/tmp/components
+ENV APPS_HOME=${PENTAHO_HOME}/applications
+ENV BIOMEV2_APP=${APPS_HOME}/biome2/etl
 
 # Set up JAVA_HOME
 RUN . /etc/environment
@@ -30,6 +32,7 @@ RUN apt-get update && apt-get install -y \
 
 # Get PBA EE
 COPY build /tmp/
+COPY samples /tmp/
 RUN ls /tmp/
 COPY scripts ${PENTAHO_HOME}/scripts/
 # Auto login to postgres
@@ -38,6 +41,9 @@ USER root
 RUN chmod 0600 ${PENTAHO_HOME}/.pgpass
 #COPY rds ${PENTAHO_HOME}/rds/
 #COPY cluster ${PENTAHO_HOME}/cluster/
+
+# COPY kettle.properties
+COPY kettle_home ${PENTAHO_HOME}/.kettle
 
 # Postgres driver
 ADD https://jdbc.postgresql.org/download/postgresql-9.4-1201.jdbc41.jar ${CATALINA_HOME}/lib/
@@ -60,9 +66,17 @@ RUN for PKG in $(echo ${COMPONENTS} | tr ':' '\n'); \
 
 WORKDIR /tmp
 
-# Run the installers headless
-RUN for DIR in $(ls -d *); \
-    do sh ${PENTAHO_HOME}/scripts/run-installer.sh ${DIR} > /dev/null 2>&1; \
+# Run the PDI Server installers headless
+RUN for DIR in $(ls -d *pdi-manual*); \
+    do sh ${PENTAHO_HOME}/scripts/run-installer.sh ${DIR} ${COMPONENTS_DIR}> /dev/null 2>&1; \
+    chown -R pentaho ${DIR}; \
+    rm -rf ${DIR}; \
+    done
+
+# Run the PDI Tools installers headless
+RUN mkdir -p ${PENTAHO_HOME}/tools
+RUN for DIR in $(ls -d *pdi*client*); \
+    do sh ${PENTAHO_HOME}/scripts/run-installer.sh ${DIR} ${PENTAHO_HOME}/tools> /dev/null 2>&1; \
     chown -R pentaho ${DIR}; \
     rm -rf ${DIR}; \
     done
@@ -75,7 +89,9 @@ WORKDIR ${COMPONENTS_DIR}
 
 RUN ls -d *
 
+#=== DI SERVER
 RUN DISERVER_DIR=$(ls -d * | grep pdi-manual | sed 's/\///'); \
+    mkdir -p ${APPS_HOME}; \
     mkdir -p ${PENTAHO_HOME}/server/data-integration-server; \
     unzip -q ${DISERVER_DIR}/di-license-installer.zip -d ${PENTAHO_HOME}; \
     rm -rf ${DISERVER_DIR}/di-license-installer.zip; \
@@ -103,12 +119,14 @@ RUN ln -s ${CATALINA_HOME} ${PENTAHO_HOME}/server/data-integration-server/tomcat
 
 VOLUME ["${PENTAHO_HOME}"]
 
+
 #######################
 # Copy EE Licenses #
 #######################
 ENV PENTAHO_INSTALLED_LICENSE_PATH=${PENTAHO_HOME}/.pentaho/.installedLicenses.xml
 #COPY licenses/installedLicenses_ee.xml ${PENTAHO_HOME}/.installedLicenses.xml
 COPY licenses/oem ${PENTAHO_HOME}/licenses/
+
 
 #######################
 # Expose ports #

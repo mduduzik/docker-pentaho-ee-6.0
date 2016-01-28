@@ -5,14 +5,16 @@ MAINTAINER mduduzi.keswa@gmail.com
 # Set up environment
 ENV PENTAHO_HOME=/opt2/pentaho
 ENV CATALINA_HOME=/usr/local/tomcat
-ENV PENTAHO_VERSION=6.0.0.0-353
+ENV PENTAHO_VERSION=6.0.1.0-386
 
 
 # Components to be installed
 ENV COMPONENTS=biserver-manual-ee:paz-plugin-ee:pdd-plugin-ee:pentaho-mobile-plugin:pir-plugin-ee
+#ENV COMPONENTS=biserver-manual-ee
 ENV PLUGINS=pentaho-cdf-dd
 ENV COMPONENTS_DIR=/tmp/components
 ENV PLUGINS_DIR=/tmp/plugins
+ENV APPS_HOME=${PENTAHO_HOME}/applications
 
 # Set up JAVA_HOME
 RUN . /etc/environment
@@ -31,7 +33,8 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Get PBA EE
-COPY build /tmp/
+COPY build/manual /tmp/
+COPY build/samples/*.zip /tmp/
 RUN ls /tmp/
 COPY scripts ${PENTAHO_HOME}/scripts/
 # Auto login to postgres
@@ -56,26 +59,31 @@ USER pentaho
 # Unzip components, removing the archives as we go
 RUN for PKG in $(echo ${COMPONENTS} | tr ':' '\n'); \
      do echo "Unzipping $PKG-${PENTAHO_VERSION}-dist.zip..."; \
-     unzip -q /tmp/$PKG-${PENTAHO_VERSION}-dist.zip -d /tmp; \
+     unzip -qo /tmp/$PKG-${PENTAHO_VERSION}-dist.zip -d /tmp; \
      rm -rf /tmp/$PKG-${PENTAHO_VERSION}-dist.zip; \
      done
 
 # Unzip plugins, removing the archives as we go
-RUN for PKG in $(echo ${PLUGINS} | tr ':' '\n'); \
-     do echo "Unzipping $PKG-${PENTAHO_VERSION}.zip..."; \
-     unzip -q /tmp/$PKG-${PENTAHO_VERSION}.zip -d ${PLUGINS_DIR}; \
-     rm -rf /tmp/$PKG-${PENTAHO_VERSION}.zip; \
-     done
-RUN do echo "Unzipping CLP-15.10.21.zip..."; \
-     unzip -q /tmp/CLP-15.10.21.zip -d ${PLUGINS_DIR}; \
-     rm -rf /tmp/CLP-15.10.21.zip; \
+#RUN for PKG in $(echo ${PLUGINS} | tr ':' '\n'); \
+#    do echo "Unzipping $PKG-${PENTAHO_VERSION}.zip..."; \
+#     unzip -q /tmp/$PKG-${PENTAHO_VERSION}.zip -d ${PLUGINS_DIR}; \
+#     rm -rf /tmp/$PKG-${PENTAHO_VERSION}.zip; \
+#     done
+
+RUN ls -la /tmp/CLP-15.10.21.zip
+
+RUN echo "Unzipping CLP-15.10.21.zip... onto ${PLUGINS_DIR}"; \
+     unzip -qo /tmp/CLP-15.10.21.zip -d ${PLUGINS_DIR}; \
+     rm -f /tmp/CLP-15.10.21.zip;
 
 # Install packages
 WORKDIR /tmp
+RUN ls -d *
 
 # Run the installers headless
-RUN for DIR in $(ls -d *); \
-    do sh ${PENTAHO_HOME}/scripts/run-installer.sh ${DIR} > /dev/null 2>&1; \
+RUN for DIR in $(ls -d *${PENTAHO_VERSION}*); \
+    do echo "Installing into ${COMPONENTS_DIR}/${DIR}..."; \
+    sh ${PENTAHO_HOME}/scripts/run-installer.sh ${DIR} > /dev/null 2>&1; \
     rm -rf ${DIR}; \
     done
 
@@ -83,9 +91,7 @@ RUN for DIR in $(ls -d *); \
 #########################################################################################
 # Explode the wars in advance so that we can update files without having to boot Tomcat #
 #########################################################################################
-
 WORKDIR ${COMPONENTS_DIR}
-
 RUN ls -d *
 
 RUN BISERVER_DIR=$(ls -d * | grep biserver | sed 's/\///'); \

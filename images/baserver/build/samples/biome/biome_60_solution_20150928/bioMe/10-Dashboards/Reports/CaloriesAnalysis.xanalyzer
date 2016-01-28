@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportRecord xmlns="http://www.pentaho.com">
+    <commonStorageAttributes createdBy="admin" updatedBy="admin" description="Calories Analysis" created="2015-09-25T09:25:54.471+01:00" update="2015-09-27T00:19:20.544+01:00">
+        <path name="CaloriesAnalysis" folder="/public/bioMe/Dashboards/Reports/CaloriesAnalysis.xanalyzer"/>
+    </commonStorageAttributes>
+    <report catalog="BioMe EHR" cube="BioMe EHR" reportTypeEnum="JSON" showRowGrandTotal="false" showColumnGrandTotal="false" useNonVisualTotals="false" showEmptyCells="false" emptyCellDisplay="-" showDrillLinks="false" version="9" autoRefresh="true" freezeColumns="true" freezeRows="true">
+        <measures>
+            <measure formula="[Measures].[Calories (Avg)]" showSum="true" showAggregate="false" showAverage="false" showCount="false" showMax="false" showMin="false" measureTypeEnum="VALUE" sortOrderEnum="NONE" id="[MEASURE:0]" gembarId="measures" gembarOrdinal="0"/>
+        </measures>
+        <columnAttributes/>
+        <rowAttributes>
+            <attribute formula="[Device Info.Months since device activation].[Months since device activation]" showSubtotal="false" sortOrderEnum="ASC" gembarId="rows" gembarOrdinal="0"/>
+        </rowAttributes>
+        <filters>
+            <filter formula="[Patient Group.Gender].[Gender]" viewFilterEnum="MULTIPLE">
+                <predicates>
+                    <predicate ordinal="1" operatorEnum="EQUAL" parameterName="genderParam">
+                        <member formula="[Patient Group.Gender].[Female]" caption="Female" pos="0"/>
+                        <member formula="[Patient Group.Gender].[Male]" caption="Male" pos="0"/>
+                    </predicate>
+                </predicates>
+            </filter>
+            <filter formula="[Medical.Medical Condition].[Medical Condition]" viewFilterEnum="MULTIPLE">
+                <predicates>
+                    <predicate ordinal="1" operatorEnum="EQUAL" parameterName="medParam">
+                        <member formula="[Medical.Medical Condition].[Diabetes]" caption="Diabetes" pos="0"/>
+                        <member formula="[Medical.Medical Condition].[Heart Disease]" caption="Heart Disease" pos="0"/>
+                        <member formula="[Medical.Medical Condition].[Hypertension]" caption="Hypertension" pos="0"/>
+                        <member formula="[Medical.Medical Condition].[None]" caption="None" pos="0"/>
+                        <member formula="[Medical.Medical Condition].[Obesity]" caption="Obesity" pos="0"/>
+                    </predicate>
+                </predicates>
+            </filter>
+        </filters>
+        <chartOptions chartType="CUSTOM" customChartType="ccc_line" legendPosition="RIGHT" showLegend="true" autoRange="false" valueAxisLowerLimit="80.0" valueAxisUpperLimit="105.0" displayUnits="UNITS_0" autoRangeSecondary="true" displayUnitsSecondary="UNITS_0" lineWidth="2" lineShape="CIRCLE" maxValues="100" backgroundColor="#ffffff" labelColor="#000000" labelSize="12" backgroundFill="NONE" maxChartsPerRow="3" multiChartRangeScope="GLOBAL" emptyCellMode="GAP" sizeByNegativesMode="NEG_LOWEST" backgroundColorEnd="#ffffff" labelStyle="BOLD" legendBackgroundColor="#ffffff" legendSize="12" legendColor="#000000" legendStyle="PLAIN" labelFontFamily="Default" legendFontFamily="Default"/>
+        <selectionFilters/>
+        <selectionItems/>
+        <pageSetup excelPageSize="LETTER" pdfPageSize="LETTER" excelOrientation="LANDSCAPE" pdfOrientation="LANDSCAPE" excelScalingType="PERCENT" excelScalingPercent="100" excelScalingPageWide="1" excelScalingPageTall="1" csvIncludeSubtotals="true" csvFormatNumbers="true"/>
+        <drillColumns/>
+    </report>
+    <uiAttributes showFieldList="true" showFieldLayout="true" showFilterPanel="true" fieldListView="CMDVIEWCATEGORY">
+        <rowFieldWidths actualWidths="105.60000000000001"/>
+        <columnDataFieldWidths actualWidths="120"/>
+        <pluginData>[{"args":{"shape":"circle","lineWidth":1,"filter.selection.max.count":500,"labelsOption":"none","trendType":"none","trendLineWidth":"1"},"visualizationId":"ccc_line"}]</pluginData>
+    </uiAttributes>
+</reportRecord>

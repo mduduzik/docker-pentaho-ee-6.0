@@ -1,0 +1,252 @@
+/******************************************************
+    device usage dashboard CSS
+******************************************************/
+
+
+@font-face { 
+    font-family: 'OpenSans'; 
+    font-weight: 400;
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face { 
+    font-family: 'OpenSans'; 
+    font-weight: 300;
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face { 
+    font-family: 'OpenSans'; 
+    font-weight: 600;
+    src: url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+.hidden{
+    display: none;
+}
+
+body .mainRowCustomDashboards{
+    font-family:  OpenSans;
+    font-size: 12px;
+}
+
+.container {
+    min-width: 768px;
+}
+
+.WDhidden{
+    display: none;
+}
+
+.dashboardName{
+    font-size: 18px;
+    font-weight: 600;
+    color: #545454;
+}
+
+.selectorsRow{
+    padding: 45px 0;
+    border-bottom: 1px solid #1b877f;
+}
+
+.selectorsRow .filter-title{
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* multi button selector */
+.chartMetricSelector button {
+    float:left;
+    padding: 6px 20px;
+    border: none;
+}
+
+.topRow{
+    padding-top: 30px;
+    background: #F9F9F9;
+    padding-bottom: 20px;
+}
+
+.chartRow.lineChart{
+    padding-top: 20px;
+}
+
+.chartRow{
+    background: #F9F9F9;
+}
+
+.legendImage{
+    background: url('../img/legend.svg') no-repeat center 4px;
+    height: 16px;
+    width: 20px;
+    display: inline-block;
+}
+
+.chartLegend{
+    color: black;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+.no-padding-top{
+    padding-top: 0;
+}
+
+/******************************************************
+    Selectors
+******************************************************/
+
+.ageSelector,
+.genderSelector,
+.medConditionSelector{
+    margin-left: -15px;
+}
+
+
+.filter-root-control{
+    background: #f2f2f2;
+}
+
+.filter-root-header:hover,.filter-controls .filter-filter .filter-filter-input:hover, 
+.filter-controls .filter-filter .filter-filter-input:focus{
+    border-color: #3597DB;
+}
+
+.filter-root-control.all-selected .filter-root-selection,
+.filter-item-container:hover .filter-item-only-this,
+.filter-item-container.all-selected{
+    color: #3597DB;
+}
+
+/******************************************************
+    Multi button
+******************************************************/
+
+.pentaho-toggle-button.pentaho-toggle-button-horizontal button {
+    border:none !important;
+    margin-top: -2px;
+    font-size: 12px;
+    box-shadow: none !important;
+    color: #555555;
+}
+
+.pentaho-toggle-button.pentaho-toggle-button-horizontal.pentaho-toggle-button-horizontal-first button{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.pentaho-toggle-button.pentaho-toggle-button-horizontal.pentaho-toggle-button-horizontal-last button{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.pentaho-toggle-button.pentaho-toggle-button-horizontal.pentaho-toggle-button-up button {
+    color: #545454;
+    background: #F9F9F9;
+    border: 1px solid #dadada !important;
+    font-weight: 300;
+    padding-top: 5px !important; 
+    padding-bottom: 5px !important;
+}
+
+.pentaho-toggle-button.pentaho-toggle-button-horizontal.pentaho-toggle-button-up:nth-child(2) button,
+.pentaho-toggle-button.pentaho-toggle-button-horizontal.pentaho-toggle-button-up:last-child button{
+    border-left: none !important;
+}
+
+
+.pentaho-toggle-button.pentaho-toggle-button-horizontal.pentaho-toggle-button-down button {
+    background: #3597DB;
+    color: white;
+    font-weight: 400;
+}
+
+.pentaho-toggle-button.pentaho-toggle-button-horizontal button:focus {
+    outline: none;
+}
+
+
+
+/******************************************************
+    gradient bar CSS 
+******************************************************/
+
+.gradValBar{
+    font-size: 14px;
+    
+}
+
+.gradientValues{
+    display: inline-block;
+    width: 540px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.gradientValues .labelLegend{
+    float: left;
+    margin-top: 7px;
+    margin-right: 15px;
+}
+
+.gradientValues .firstValue{
+    float: left;
+    margin-top: 7px;
+    margin-right: 5px;
+}
+
+.gradientValues .lastValue{
+    margin-top: 7px;
+}
+
+.gradientValues .gradientBar{
+    float: left;
+    width: 400px;
+}
+
+.gradientBar{
+    height: 30px;
+    background: #E2ECEC;
+ /*   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RjZGNkYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5ZTAwMDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)*/;
+    background: -moz-linear-gradient(left,  #E2ECEC 0%, #1B867E 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#E2ECEC), color-stop(100%,#1B867E));
+    background: -webkit-linear-gradient(left,  #E2ECEC 0%,#1B867E 100%);
+    background: -o-linear-gradient(left,  #E2ECEC 0%,#1B867E 100%);
+    background: -ms-linear-gradient(left,  #E2ECEC 0%,#1B867E 100%);
+    background: linear-gradient(to right,  #E2ECEC 0%,#1B867E 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2ECEC', endColorstr='#1B867E',GradientType=1 );
+
+}
+
+.gradientBar{
+    position:relative;
+}
+
+.vertbar{
+    position: absolute;
+    height: 30px;
+    width: 1px;
+    background: #DADADA;
+}
+
+.vertbar1,.vertbar2,.vertbar3,.vertbar4,.vertbar5,.vertbar6,.vertbar7{
+    margin-left:30px;
+}
+
+
+/******************************************************
+    footer logo 
+******************************************************/
+
+.pentahoLogo {
+    background: url('../img/pentaho.png') 99%  white;
+    background-repeat: no-repeat;
+    background-size: 215px 68px;
+    height: 50px;
+    margin-top: 53px;
+}
+
