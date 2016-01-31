@@ -4,7 +4,7 @@
 eval $(docker-machine env default)
 
 # Run the pentaho-postgres container first
-read MY_SSH_KEY < ~/.ssh/id_rsa.pub
+read MY_SSH_KEY < ~/.ssh/id_rsa.pub &&
 docker run -d \
   -p 2223:22 \
   -p 5433:5432 \
@@ -19,6 +19,7 @@ docker run -it \
   -p 2232:22 \
   -p 8180:8080 \
   --name pentaho-ba-ee-6 \
+  --add-host conx.dev:192.168.99.100 \
   --link pentaho-postgresql:pentaho-postgresql \
   -e PGUSER=pentahoadmin \
   -e PGPASS=pentahoadmin! \
@@ -32,6 +33,7 @@ docker run -it \
   -p 2233:22 \
   -p 9180:8080 \
   --name pentaho-di-ee-6 \
+  --add-host conx.dev:192.168.99.100 \
   --link pentaho-postgresql:pentaho-postgresql \
   -e PGUSER=pentahoadmin \
   -e PGPASS=pentahoadmin! \
